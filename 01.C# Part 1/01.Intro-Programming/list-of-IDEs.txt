@@ -1,0 +1,59 @@
+1. CodeLite
+An Open-Source, cross-platform IDfor C+ and C++ coding languages, CodeLite works on all major platforms. CodeLite offers a variety of features, including two built-in completion engines, compilers, refactoring, code navigation and more.
+
+2. Code::Blocks
+Code::Blocks, an extensible and fully configurable IDE designed to support its users most demanding needs, supports C, C++ and Fortran. It provides a consistent look, feel and operation across all platforms for seamless transitions between work spaces, and it’s built around a plug-in framework, providing a multitude of options for extension. It’s open-source and offers cross-platform functionality with no hidden costs.
+
+3. DialogBlocks
+A cross-platform GUI coding assistant, DialogBlocks is a simple tool to easily edit dialogs and generate code. If you need to build wxWidgets GUIs, DialogBlocks makes it fast and simple. Create professional dialogs, wizards and frames for deployment on Windows, Linux, and Mac, or any other supported wxWidgets platform.
+
+4. Eclipse
+Many development frameworks are built on Eclipse, a free, open-source editor that was initially a Java environment but a variety of plug-ins have extended its capabilities considerably. The Eclipse Standard 4.3.2 version, for instance, includes the Eclipse Platform along with the tools required to debug it, plus Java and Plugin Development Tooling and Git and CVS support. If your requirements are different, you can choose from a variety of Eclipse Package Solutions, including tools for Java developers, Scout Developers, RCP and RAP Developers and more.
+
+5. NetBeans
+An intuitive, drag-and-drop interface with project templates, binary and static libraries, and many useful functions to make your life simpler, NetBeans is a popular IDE for C and C++ projects. It also supports Fortan and Assembler files, with GNU Debugger Integration and code assistance, NetBeans is a functional IDE for editing existing projects, building on templates or building from scratch on most leading platforms. There are also multiple NetBeans Enterprise IDE Download Bundles with options that support several additional technologies, including Java, PHP, HTML5 and more.
+
+6. Komodo IDE
+Komodo is a comprehensive IDE that supports all major programming languages, providing a single tool that meets your development needs across the spectrum. Whether you’re working with Python, PHP, Ruby, Perl, HTML, CSS or JavaScript, Komodo provides a clean, intuitive interface with advanced editing capabilities and integrated tools for the most functionality. 
+
+7. Aptana Studio 3
+Aptana, recently acquired by Appcelerator, offers one of the most powerful open-source IDEs: Aptana Studo 3. It’s been completely re-built to provide a faster and seamless environment for developing and testing an entire web application using a single environment. Aptana Studio 3 supports all the major browser technology specs, eliminating compatibility and testing challenges to speed your time to deployment. 
+
+8. Geany
+Geany is a text editor that uses the GTK2 toolkit, although it has most of the basic features of an IDE. It was developed specifically to provide a small, fast IDE, and it requires only the GTK2 run libraries in order to remain as independent as possible from  special Desktop Environments, such as KDE or GNOME.
+
+9. ShiftEdit
+ShiftEdit is an online IDE that allows you to develop within your browser. With all the files, features and functionality you need, you can seamlessly work within any browser without interrupting your workflow or having to install software. With eight major languages supported an a SaaS model, ShiftEdit is simple, accessible and functional.
+
+10. Squad
+A web-based IDE, Squad simplifies collaboration with the ability to open, edit and share files in real time, from any web browser. Not only can you work with team members in remote locations, but solo developers can quickly ask professional contacts for advice by giving workspace access through simple URL sharing.
+
+11. Cloud 9 IDE
+A powerful, flexible IDE, Cloud 9 allows you to collaborate publicly or privately in workspaces. Write, run and debug code from the cloud, working with team members remotely and in real-time, with group editing and chatting capabilities for seamless communication and more effective collaboration. You can take your apps all the way to completion with deployment options including Heroku, Cloud Foundry and Windows Azure.
+
+12. Microsoft Visual Studio
+Microsoft Visual Studio offers a multitude of editions for developing, testing, and deploying applications for the web, desktop, mobile, and even game consoles. With a plethora of testing and compatibility tools, you can test on virtual machines, tap into the functionality of BrowserStack to see what your app looks like across more than 300 browsers, run compatibility reports to identify patterns and issues between browsers and so much more.
+
+13. Xcode IDE
+Xcode IDE is a component of Xcode 5, a complete set of tools for building and deploying apps in the Apple environment. It’s integrated with the Cocoa and Cocoa Touch frameworks for streamlined development of apps for the Mac, iPhone and iPad. It’s designed for a seamless workflow to move from start to finish in a single interface, with built-in communication with the Apple Developer website for one-click enablement of services like Game Center or Passbook, allowing you to create more robust, highly-functional apps in a fraction of the time.
+
+14. MacRabbit Espresso
+Everyday editing tasks are quick and painless with MacRabbit Espresso’s broad functionality and extensive language support. With seamless sync and publishing, combined with powerful coding tools to drastically reduce development time, you can develop sophisticated applications using the most up-to-date technologies and functionality.
+
+15. MonoDevelop
+MonoDevelop is a free GNOME IDE designed primarily for C# and other .NET languages, but it’s open to most any language and has some variation in supported languages across platforms. MonoDevelop enables the rapid development of  desktop and ASP.NET web applications for Windows, Linux and Mac platforms, with the option to port applications created with Visual Studio to Max and Linux platforms, allowing for a consistent code base across platforms.
+
+16. Coda 2
+Coda 2 is a refreshed version of the original, with the same Editor, Terminal, CSS, Files and other essentials you demand for building functional web applications, enhanced with a slew of additional features and a streamlined, refreshed user interface to make your workspace a stress-free, usable oasis. Coda 2 packs more than 100 new features than the original. A lightweight, simple code editor, Coda 2 offers multiple plug-ins for extending capabilities.
+
+17. Bloodshed Dev-C++
+A full-featured IDE for C++, Bloodshed Dev-C++offers integrated debugging with GDB, project and tool managers, template support for creating your own project types, and more. Written in Delphi, Dev-C++ is an open-source software that creates either console or GUI native Win32 executables. It uses Mingw port of the GCC (GNU Compiler Collection) and can also be used with Cygwin.
+
+18. C-Free
+Edit, build, run and debug your program with complete autonomy in C-Free’s IDE. Designed for C and C++, it can be used as an editor or as a stand-alone programming environment, with tools and features to extend your capabilities and speed development time with integrated tools in a single, compatible workflow.
+
+19. Eric Python IDE
+A full-featured Ruby and Python editor and IDE, Eric Python IDE is written using Python and is based on the cross platform Qt GUI Toolkit. Editor control is enabled through Scintilla integration for robust flexibility. It’s intended for use both as a simple editor for last-minute and stand-alone editing tasks, as well as a professional project management tool.
+
+20. Kantharos IDE
+A rapid PHP development environment, Kantharos IDE can be used for offline system scripting needs, including code execution time analysis, custom database maintenance, manual web page queries and more. Single-scipt oriented and portable, Kantharos IDE is lightweight and focused but a useful tool if you have offline scripting needs.

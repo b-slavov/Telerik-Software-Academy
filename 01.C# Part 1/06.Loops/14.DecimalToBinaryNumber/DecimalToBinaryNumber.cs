@@ -1,0 +1,21 @@
+﻿using System;
+
+class DecimalToBinaryNumber
+{
+    static void Main()
+    {
+        Console.Write("decimal: ");
+        long decimalNumber = long.Parse(Console.ReadLine());
+
+        string binaryNumber = string.Empty;
+
+        while (decimalNumber != 0)
+        {
+            int remainder = (int)decimalNumber % 2;
+            decimalNumber /= 2;
+            binaryNumber = remainder + binaryNumber;
+        }
+
+        Console.WriteLine("binary: " + binaryNumber);
+    }
+}
