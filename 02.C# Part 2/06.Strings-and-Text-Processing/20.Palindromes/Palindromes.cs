@@ -1,0 +1,28 @@
+﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+class Palindromes
+{
+    static void Main()
+    {
+        string text = Console.ReadLine();
+
+        MatchCollection words = Regex.Matches(text, @"\b\w+\b");
+
+        Console.WriteLine("Extracted palindromes from the sample text: ");
+
+        foreach (var word in words)
+        {
+            if (IsPalindrome(word.ToString()))
+            {
+                Console.WriteLine("- " + word);
+            }
+        }
+    }
+
+    static bool IsPalindrome(string word)
+    {
+        return word.ToCharArray().SequenceEqual(word.ToCharArray().Reverse());
+    }
+}
