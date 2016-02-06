@@ -9,7 +9,7 @@ class Printing
         decimal p = decimal.Parse(Console.ReadLine());
 
         decimal realm = 500;
-        decimal savedMoney = n * s / realm * p; 
+        decimal savedMoney = n * s / realm * p;
 
         Console.WriteLine("{0:F2}", savedMoney);
     }

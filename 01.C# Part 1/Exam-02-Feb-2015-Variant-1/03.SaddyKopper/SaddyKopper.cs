@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
-class ShaddyKopper
+class SaddyKopper
 {
     static void Main()
     {

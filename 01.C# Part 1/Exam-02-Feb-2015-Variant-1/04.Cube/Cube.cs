@@ -11,16 +11,16 @@ class Cube
 
         Console.Write(new string(' ', n - 2));
         Console.Write(':');
-        Console.Write(new string ('/', n - 2));
+        Console.Write(new string('/', n - 2));
         Console.WriteLine(new string(':', 2));
-        
+
         for (int i = 3; i < n; i++)
         {
             Console.Write(new string(' ', n - i));
             Console.Write(':');
             Console.Write(new string('/', n - 2));
             Console.Write(':');
-            Console.Write(new string ('X', i - 2));
+            Console.Write(new string('X', i - 2));
             Console.WriteLine(':');
         }
 
