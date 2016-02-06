@@ -4,7 +4,8 @@ using System.Text;
 
 class BracketsAgain
 {
-    // taken from https://msdn.microsoft.com/en-us/library/x53a06bb.aspx - remove all known keywords which can invoke methods (primitive data types) - example int.Parse
+    // Source: https://msdn.microsoft.com/en-us/library/x53a06bb.aspx - remove all known keywords which can invoke methods (primitive data types)
+    // Example: int.Parse
     private static string[] keywords = new string[]
     {
             "abstract",

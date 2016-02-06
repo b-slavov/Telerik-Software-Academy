@@ -41,7 +41,7 @@ class MathProblem
             }
 
             Console.WriteLine(result + " = " + output);
-        } 
+        }
     }
 
     public static long PowerOfNineteen(int power)
