@@ -1,0 +1,46 @@
+table{
+	background: #f3f9fa;
+	border: 1px solid #8df6f4;
+	border-collapse: collapse;
+	text-shadow: 2px 2px 3px #aaa;
+}
+
+#result{
+	padding: 10px 20px;
+}
+
+td{
+	border: 1px solid #8df6f4;
+}
+
+button{
+	background: #f3f9fa;
+	border: none;
+	padding: 10px 20px;
+	font-size: 30px;
+	font-family: Consolas;
+	font-weight: bold;
+	color: #8df6f4;
+	text-shadow: 2px 2px 3px #aaa;
+}
+
+#zeroButton{
+	padding: 10px 50px;
+}
+
+input{
+	display: inline-block;
+	width: 50px;
+	background: #f3f9fa;
+	text-align: right;
+	border: none;
+	font-size: 30px;
+	font-family: Consolas;
+	font-weight: bold;
+	color: #8df6f4;
+	text-shadow: 2px 2px 3px #aaa;
+}
+
+button:hover{
+	background-color: #8df6f4;
+}
