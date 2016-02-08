@@ -2,19 +2,19 @@ Semantic HTML
 =============
 
 ### Problem 1. Refactoring
-*	Refactor (edit) the [homework-refactoring.html](https://github.com/TelerikAcademy/HTML/blob/master/6.%20Semantic%20HTML/homework-refactoring.html) web page and make it HTML semantic.
+*	Refactor (edit) the [1-refactoring.html](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/04.HTML%20Basics/04.Semantic-HTML/images/homework/1-refactoring.html) web page and make it HTML semantic.
 
 ### Problem 2. Student System
 *	Create a web page using semantic HTML by the design.
 *	Use some kind of approach to support old (non-HTML5-compatible) Web browsers like IE8.
 
-![picture1](https://cloud.githubusercontent.com/assets/3619393/7179645/ba6f880e-e442-11e4-9f54-235e88cb686a.png)
+![picture1](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/04.HTML%20Basics/04.Semantic-HTML/images/homework/2-student-system.png)
 
 _Note: Do not try to make the same styles. Implement just the content with its semantics._
 
 ### Problem 3. LinkedIn
 *	Create a web page using semantic HTML by the design.
 
-![picture2](https://cloud.githubusercontent.com/assets/3619393/7179271/ac996bf4-e43e-11e4-981f-d0914a8ca92d.png)
+![picture2](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/04.HTML%20Basics/04.Semantic-HTML/images/homework/3-linkedin.png)
 
 _Note: Do not try to make the same styles. Implement just the content with its semantics._
