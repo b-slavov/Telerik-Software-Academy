@@ -1,0 +1,51 @@
+table
+{
+	background-color: #595959;
+	font: normal 14px/100% Arial, sans-serif;
+	border-collapse: collapse;
+}
+
+td:first-child
+{
+	font-style: italic;
+	color: #F8F8F8;
+	padding: 8px 20px 8px 5px;
+}
+
+#ID
+{
+	color: #B2B2B2;
+	letter-spacing: -1px;
+	font: 22px/110% Arial, sans-serif;
+	padding: 10px 120px 10px 5px;
+}
+
+.beigeText
+{
+	color: #FFC;
+}
+
+.grayText
+{
+	color: #C1C1C1;
+}
+
+#name
+{
+	background: #595959 url('../images/green-dot.png') no-repeat left center;
+	text-indent: 20px;
+}
+
+#noActive
+{
+	color: #F00;
+	font-weight: bold;
+	vertical-align: top;
+	padding: 0px 120px 15px 0px;
+}
+
+#status
+{
+	color: #F60;
+	font-weight: bold;
+}
