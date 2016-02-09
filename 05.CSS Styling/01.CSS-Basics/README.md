@@ -13,6 +13,6 @@ CSS Overview
 ![picture2](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/01.CSS-Basics/images/homework/2-international-employees.png)
 
 ### Problem 3. Forum Posts
-*	Create a web page using the design and the HTML markup in [homework.html](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/01.CSS-Basics/images/homework/3-forum-posts.html).
+*	Create a web page using the design and the HTML markup in [HTML](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/01.CSS-Basics/images/homework/3-forum-posts.html).
 
 ![picture3](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/01.CSS-Basics/images/homework/3-forum-posts.png)
