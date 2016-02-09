@@ -6,37 +6,37 @@ CSS Layout
 	*	When the mouse goes over an item the sub list should be shown
 	*	The tree view should work with unlimited number of sub lists
 
-![picture1](https://cloud.githubusercontent.com/assets/3619393/7184543/7e1aaafe-e466-11e4-85b3-0d2a91f7e2f0.png)
+![picture1](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/03.CSS-Layout/images/homewrok/1-tree-view.png)
 
 ### Problem 2. Music Categories
 *	Create the following Web page using external CSS styles.
 	*	Buttons should consist of `PNG` images with text over them.
 
-![picture2](https://cloud.githubusercontent.com/assets/3619393/7184547/7e1d5fce-e466-11e4-9839-5e30a95045d7.png)
+![picture2](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/03.CSS-Layout/images/homewrok/2-music-categories.png)
 
 ### Problem 3. Members login
 *	Create the following Web page using HTML with external CSS file.
 
 _Note: The images should be `PNG` with transparent background._
 
-![picture3](https://cloud.githubusercontent.com/assets/3619393/7184545/7e1d45de-e466-11e4-965e-33f81b8ef5c6.png)
+![picture3](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/03.CSS-Layout/images/homewrok/3-members-login.png)
 
 ### Problem 4. CSS Documentation site
 *	Given the picture below create the Web site
 	*	Use CSS and HTML 5
 
-![picture4](https://cloud.githubusercontent.com/assets/3619393/7184544/7e1aea8c-e466-11e4-9081-c96799bd0704.png)
+![picture4](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/03.CSS-Layout/images/homewrok/4-css-documentation-site.png)
 
 ### Problem 5. Laptop store
 *	Create the following HTML 5 Page
 
 _Note: Do it without tables_
 
-![picture5](https://cloud.githubusercontent.com/assets/3619393/7184546/7e1d5f4c-e466-11e4-885e-f28d1471879b.png)
+![picture5](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/03.CSS-Layout/images/homewrok/5-laptop-store.png)
 
 ### Problem 6. News site
 *	Create the following Web page using HTML and external CSS.
 
 _Note: Using tables, inline styles and deprecated tags is *not* allowed!_
 
-![picture6](https://cloud.githubusercontent.com/assets/3619393/7184548/7e1dcc52-e466-11e4-8e21-17b78a84449a.png)
+![picture6](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/03.CSS-Layout/images/homewrok/6-news-site.png)

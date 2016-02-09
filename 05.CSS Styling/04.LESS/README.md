@@ -7,7 +7,7 @@ LESS
 	*	Create the LESS easy to change (backgrounds, fonts)
 	*	Use mixins for clears, gradients)
 
-![picture1](https://cloud.githubusercontent.com/assets/3619393/7184114/1f79cb80-e464-11e4-9a3d-5c916c0390ce.png)
+![picture1](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/04.LESS/images/homework/1-forum-post.png)
 
 ### Problem 2. Web Gallery
 *	Create a web gallery
@@ -15,4 +15,4 @@ LESS
 	*	List images
 	*	When a image is selected, show it zoomed
 
-![picture2](https://cloud.githubusercontent.com/assets/3619393/7185067/4abe223c-e469-11e4-80a7-e6750fa89e63.png)
+![picture2](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/04.LESS/images/homework/2-web-gallery.png)
