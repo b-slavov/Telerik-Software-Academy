@@ -3,7 +3,7 @@ LESS
 
 ### Problem 1. Forum Post
 *	Implement the following using a preprocessor of your choice - LESS/SASS/Stylus
-	*	Use the [HTML](https://github.com/TelerikAcademy/CSS/blob/master/4.%20LESS/homework/homework.html) code
+	*	Use the [HTML](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/04.LESS/images/homework/1-forum-post.html) code
 	*	Create the LESS easy to change (backgrounds, fonts)
 	*	Use mixins for clears, gradients)
 

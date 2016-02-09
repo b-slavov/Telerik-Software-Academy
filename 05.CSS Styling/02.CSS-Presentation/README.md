@@ -9,8 +9,8 @@ CSS Presentation
 ![picture1](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/02.CSS-Presentation/images/homework/1-lorem-ipsum-page.png)
 
 ### Problem 2. Forum Posts
-*	You are given pre-written [HTML](https://github.com/TelerikAcademy/CSS/blob/master/2.%20CSS%20Presentation/homework/homework.html)
- and [CSS](https://github.com/TelerikAcademy/CSS/blob/master/2.%20CSS%20Presentation/homework/homework.css) code.
+*	You are given pre-written [HTML](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/02.CSS-Presentation/images/homework/2-forum-posts.html)
+ and [CSS](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/02.CSS-Presentation/images/homework/2-forum-posts.css) code.
 *	Expand this code to make the web page to look exactly like the PNG image:
 
 ![picture2](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/05.CSS%20Styling/02.CSS-Presentation/images/homework/2-forum-posts.png)
