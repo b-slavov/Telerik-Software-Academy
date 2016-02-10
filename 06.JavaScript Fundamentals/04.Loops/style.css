@@ -1,0 +1,16 @@
+input {
+    text-align: right;
+    width: 100px;
+    padding-right: 3px;
+}
+
+span {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#array {
+    width: 200px;
+}

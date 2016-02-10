@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Functions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span class="title">Problem 1. English digit</span>
+    <label for="number1">Enter an integer:</label>
+    <input id="number1" placeholder="Enter an integer" />
+    <button onclick="problem1()">Print last digit as word</button>
+    <div id="pr1answer">Result:</div>
+    <hr />
+
+    <span class="title">Problem 2. Reverse number</span>
+    <label for="number2">Enter a decimal number:</label>
+    <input id="number2" placeholder="Enter a number" />
+    <button onclick="problem2()">Reverse</button>
+    <div id="pr2answer">Result:</div>
+    <hr />
+
+    <span class="title">Problem 3. Occurrences of word</span>
+    <label for="word">Enter a word:</label>
+    <input id="word" placeholder="..." />
+    <input id="submit" type="button" value="Search in text" onclick="problem3()" />
+    <div id="notice"></div>
+    <div id="case-sensitive">
+        <label for="check">Case sensitive</label>
+        <input id="check" type="checkbox" />
+    </div>
+    <div id="text">
+        <h2>JavaScript</h2>
+        <p>JavaScript, also known as ECMAScript (the untrademarked name used for the standard), is a dynamic programming language. It is most commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user, control the browser, communicate asynchronously, and alter the document content that is displayed. It is also used in server-side network programming with runtime environments such as Node.js, game development and the creation of desktop and mobile applications.</p>
+        <p>JavaScript is classified as a prototype-based scripting language with dynamic typing and first-class functions. This mix of features makes it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.</p>
+        <p>Despite some naming, syntactic, and standard library similarities, JavaScript and Java are otherwise unrelated and have very different semantics. The syntax of JavaScript is actually derived from C, while the semantics and design are influenced by the Self and Scheme programming languages.</p>
+        <p>JavaScript is also used in environments that aren't web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.</p>
+    </div>
+    <hr />
+
+    <span class="title">Problem 4. Number of elements</span>
+    <input type="button" value="Add DIVs" onclick="addDiv()" />
+    <input type="button" value="Count DIVs" onclick="divCount()" />
+    <input type="button" value="Reset DIVs" onclick="resetDiv()" />
+    <div>
+        <p id="count"></p>
+    </div>
+    <div id="newDivs"></div>
+    <hr />
+
+    <span class="title">Problem 5. Appearance count</span>
+    <label for="array1">Enter a sequence of numbers</label>
+    <input id="array1" class="array" placeholder="Example: 3, 1, 7, 2, 5..." />
+    <br />
+    <label for="number5">Enter a number</label>
+    <input id="number5" placeholder="Enter a number" />
+    <button onclick="problem5()">Count</button>
+    <div id="pr5answer">Result:</div>
+    <br />
+    <div id="pr5test">Results from the function testing</div>
+    <hr />
+
+    <span class="title">Problem 6. Larger than neighbours</span>
+    <label for="array2">Enter a sequence of numbers</label>
+    <input id="array2" class="array" placeholder="Example: 3, 1, 7, 2, 5..." />
+    <br />
+    <label for="number6">Enter position</label>
+    <input id="number6" placeholder="Enter index" />
+    <button onclick="problem6()">Check</button>
+    <div id="pr6answer">Result:</div>
+    <hr />
+
+    <span class="title">Problem 7. First larger than neighbours</span>
+    <label for="array3">Enter a sequence of numbers</label>
+    <input id="array3" class="array" placeholder="Example: 3, 1, 7, 2, 5..." />
+    <button onclick="problem7()">Return index</button>
+    <div id="pr7answer">Result:</div>
+    <hr />
+
+    <script src='functions.js'></script>
+</body>
+</html>

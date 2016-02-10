@@ -1,0 +1,72 @@
+input {
+    text-align: right;
+    width: 100px;
+    padding-right: 3px;
+}
+
+.array {
+    width: 200px;
+}
+
+span:not(.title) {
+    background: yellow;
+    font-size: 1em;
+    display: inline;
+}
+
+span.title {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#text {
+    width: 750px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+    font-family: Arial;
+    font-size: 16px;
+    text-align: justify;
+}
+
+#notice {
+    display: none;
+    color: red;
+    margin: 0;
+}
+
+#notice > p {
+    margin: 0;
+}
+
+#case-sensitive
+{
+    display: block;
+}
+
+h2,
+p {
+    margin: 5px 0;
+}
+
+#check {
+    vertical-align: middle;
+    width: 15px;
+}
+
+#newDivs {
+    width: 750px;
+    padding: 4px;
+    border: 1px solid black;
+    display: none;
+}
+
+.newDiv {
+    width: 115px;
+    border: 1px solid black;
+    margin: 4px;
+    text-align: center;
+    display: inline-block;
+}
