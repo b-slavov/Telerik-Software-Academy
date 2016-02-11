@@ -1,6 +1,6 @@
 # Test-Driven Development (TDD) Homework
 
-## Finish the "Poker" project given in the [demo](https://github.com/TelerikAcademy/High-Quality-Code/tree/master/12.%20Test-Driven%20Development/Demo) using TDD.
+## Finish the "Poker" project given in the [demo](https://github.com/b-slavov/Telerik-Software-Academy/tree/master/07.High-Quality%20Code/11.Test-Driven-Development/Demo) using TDD.
 
 ### Task 1. In the `Card` class implement the `ToString()` method
 *   Use Test-Driven Development (TDD)
