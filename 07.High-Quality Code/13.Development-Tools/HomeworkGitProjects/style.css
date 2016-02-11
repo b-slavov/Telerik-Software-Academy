@@ -1,0 +1,25 @@
+#table-content tr td {
+    text-align: left;
+}
+
+a {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+    a:link a:visited {
+        color: darkgreen;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: green;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+.back {
+    color: red;
+}

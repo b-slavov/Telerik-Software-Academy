@@ -1,0 +1,50 @@
+Design pattern: Simple Factory
+	* In ManufacturerFactory class, method GetManufacturer creates different types of IComputerFactory, based on given string.
+
+Design pattern: Strategy
+	* In Laptop constructor the battery can vary
+	* Cpu can work with any IMotherboard components
+	* In Computer constructor IRam can vary
+
+Design pattern: Template Method
+	* Cpu has method SquareNumber which uses the abstract method GetMaxValue which is implemented in Cpu32, Cpu64 and Cpu128
+
+Design pattern: Abstract factory
+	* Introduced IComputerFactory as a base class for HpComputerFactory and DellComputer factory which creates a different type of computers.
+
+Design pattern: Composite
+	* SingleHardDrive and RaidArray are both HardDrive and RaidArray contains other HardDrives
+
+Design pattern: Mediator
+	* Motherboard is mediator for all computer components (e.g. Cpu)
+
+Found bottlenecks:
+	* In Cpu.Rand getting random number is in while loop which slows down the operation
+	* SquareNumber uses for loop for squaring a number
+
+Found bugs:
+	* When input is invalid command name, the program does not print message "Invalid command!"
+	* When "Process" command is executed, NullReferenceException is thrown.
+	* System.Collections.Generic.dll with single class was referenced in out assembly.
+	* When printing battery status the "%" sign was missing
+
+Single responsibility principle
+	* All manufacturers are responsible only for creating computers
+	* VideoCard is responsible for printing and HardDrive is responsible for saving data
+	* Laptop, Server and PC are separate classes
+
+Open/closed principle
+	* The RAM memory can be interchanged by the client without touching the original code
+	* The LaptopBattery can be interchanged by the client without touching the original code
+	* HardDrive is abstract class and allows other HardDrives to be added
+
+Liskov substitution principle
+	* All inheritors can be used instead of their parent class without problems
+	* All classes are interchangeable without problems
+
+Interface segregation principle
+	* All interfaces are small and well-defined
+
+Dependency inversion principle
+	* In the Computer constructor IRam is passed
+	* The Laptop class expects ILaptopBattery, which is interface and give us the possibility of defining own ILaptopBattery

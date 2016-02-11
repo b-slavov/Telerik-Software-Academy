@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.QualityMethods", "01.QualityMethods\01.QualityMethods.csproj", "{CA6BF1F4-0BB8-46A3-9898-E76DD16627F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.RefactorCSharp2ExamTask1", "02.RefactorCSharp2ExamTask1\02.RefactorCSharp2ExamTask1.csproj", "{1C198DE0-5329-4F12-B2FA-6F983BF00C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.RefactorCSharp2ExamTask2", "03.RefactorCSharp2ExamTask2\03.RefactorCSharp2ExamTask2.csproj", "{0767D742-7618-4EA7-97D3-FA4B764B0E31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.RefactorCSharp2ExamTask3", "04.RefactorCSharp2ExamTask3\04.RefactorCSharp2ExamTask3.csproj", "{CC2C996F-1DCC-4362-BF5A-176252FE0906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.RefactorCSharp2ExamTask4", "05.RefactorCSharp2ExamTask4\05.RefactorCSharp2ExamTask4.csproj", "{8977A683-A305-4096-972F-F8C2CAF153F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.RefactorCSharp2ExamTask5", "06.RefactorCSharp2ExamTask5\06.RefactorCSharp2ExamTask5.csproj", "{EA9F2462-6AB9-46BB-9751-DCDD5AA721B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA6BF1F4-0BB8-46A3-9898-E76DD16627F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6BF1F4-0BB8-46A3-9898-E76DD16627F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6BF1F4-0BB8-46A3-9898-E76DD16627F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6BF1F4-0BB8-46A3-9898-E76DD16627F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C198DE0-5329-4F12-B2FA-6F983BF00C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C198DE0-5329-4F12-B2FA-6F983BF00C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C198DE0-5329-4F12-B2FA-6F983BF00C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C198DE0-5329-4F12-B2FA-6F983BF00C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0767D742-7618-4EA7-97D3-FA4B764B0E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0767D742-7618-4EA7-97D3-FA4B764B0E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0767D742-7618-4EA7-97D3-FA4B764B0E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0767D742-7618-4EA7-97D3-FA4B764B0E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2C996F-1DCC-4362-BF5A-176252FE0906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2C996F-1DCC-4362-BF5A-176252FE0906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2C996F-1DCC-4362-BF5A-176252FE0906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2C996F-1DCC-4362-BF5A-176252FE0906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8977A683-A305-4096-972F-F8C2CAF153F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8977A683-A305-4096-972F-F8C2CAF153F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8977A683-A305-4096-972F-F8C2CAF153F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8977A683-A305-4096-972F-F8C2CAF153F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA9F2462-6AB9-46BB-9751-DCDD5AA721B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA9F2462-6AB9-46BB-9751-DCDD5AA721B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA9F2462-6AB9-46BB-9751-DCDD5AA721B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA9F2462-6AB9-46BB-9751-DCDD5AA721B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
