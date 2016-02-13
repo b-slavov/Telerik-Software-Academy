@@ -3,9 +3,9 @@
 ##Task 1
 **Optional, no points, no deadline**
 Draw the following using canvas:<br/>
-<img src="imgs/head.png" style="width:25%" />
-<img src="imgs/bicycle.png" height="250" style="width:25%"/>
-<img src="imgs/house.png" height="250" style="width:25%"/>
+<img src="images/head.png" style="width:25%" />
+<img src="images/bicycle.png" height="250" style="width:25%"/>
+<img src="images/house.png" height="250" style="width:25%"/>
 
 ##Task 2
 **Optional, no points, no deadline**
@@ -15,7 +15,7 @@ Draw the following using canvas:<br/>
 *   When it reaches an edge, it should bounce that edge
 *   _Example:_
 
-<img src="imgs/bouncing-ball.png" width="500" />
+<img src="images/bouncing-ball.png" width="500" />
 
 ##Task 3
 **Optional, no points, no deadline**
