@@ -4,8 +4,8 @@ The **JavaScript UI and DOM** is about building of low-level user interface. The
 
 ## Preparing the local machine for Unit testing with Mocha and Chai 
 
-* Install [JavaScript I/O](https://iojs.org/en/index.html "JavaScript I/O")
-    * Try if it is working by typing in CMD/Terminal `$ iojs -v` (should produce result)
+* 	Install [JavaScript I/O](https://iojs.org/en/index.html "JavaScript I/O")
+    *	Try if it is working by typing in CMD/Terminal `$ iojs -v` (should produce result)
 *	Open CMD/Terminal and run `$ npm install -g mocha`
 
 ## Preparing for the tests for each homework
