@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+  <album>
+    <name>The Eminem Show</name>
+    <artist>Eminem</artist>
+    <year>2002</year>
+    <producer>Dr. Dre</producer>
+    <price>17.50</price>
+    <songs>
+      <song>
+        <title>White America</title>
+        <duration>05:24</duration>
+      </song>
+      <song>
+        <title>Cleanin' Out My Closet</title>
+        <duration>04:57</duration>
+      </song>
+      <song>
+        <title>Without Me</title>
+        <duration>04:50</duration>
+      </song>
+      <song>
+        <title>Sing for the Moment</title>
+        <duration>05:40</duration>
+      </song>
+      <song>
+        <title>Superman</title>
+        <duration>05:50</duration>
+      </song>
+      <song>
+        <title>When the Music Stops</title>
+        <duration>04:29</duration>
+      </song>
+      <song>
+        <title>'Till I Collapse</title>
+        <duration>04:57</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Grand Champ</name>
+    <artist>DMX</artist>
+    <year>2003</year>
+    <producer>DMX</producer>
+    <price>17.59</price>
+    <songs>
+      <song>
+        <title>Where the Hood At?</title>
+        <duration>04:46</duration>
+      </song>
+      <song>
+        <title>Dogs Out</title>
+        <duration>04:03</duration>
+      </song>
+      <song>
+        <title>Get It on the Floor</title>
+        <duration>04:22</duration>
+      </song>
+      <song>
+        <title>Untouchable</title>
+        <duration>06:05</duration>
+      </song>
+      <song>
+        <title>We Go Hard</title>
+        <duration>03:36</duration>
+      </song>
+      <song>
+        <title>The Rain</title>
+        <duration>03:27</duration>
+      </song>
+      <song>
+        <title>On Top</title>
+        <duration>03:34</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>The Marshall Mathers LP</name>
+    <artist>Eminem</artist>
+    <year>2000</year>
+    <producer>The 45 King</producer>
+    <price>18.39</price>
+    <songs>
+      <song>
+        <title>Stan</title>
+        <duration>06:44</duration>
+      </song>
+      <song>
+        <title>Who Knew</title>
+        <duration>03:47</duration>
+      </song>
+      <song>
+        <title>The Way I Am</title>
+        <duration>04:50</duration>
+      </song>
+      <song>
+        <title>The Real Slim Shady</title>
+        <duration>04:44</duration>
+      </song>
+      <song>
+        <title>Marshall Mathers</title>
+        <duration>05:20</duration>
+      </song>
+      <song>
+        <title>Kim</title>
+        <duration>06:17</duration>
+      </song>
+      <song>
+        <title>Criminal</title>
+        <duration>05:15</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Teflon Don</name>
+    <artist>Rick Ross</artist>
+    <year>2010</year>
+    <producer>Clark Kent</producer>
+    <price>16.19</price>
+    <songs>
+      <song>
+        <title>I'm Not a Star</title>
+        <duration>03:00</duration>
+      </song>
+      <song>
+        <title>Maybach Music III</title>
+        <duration>04:26</duration>
+      </song>
+      <song>
+        <title>Live Fast, Die Young</title>
+        <duration>06:13</duration>
+      </song>
+      <song>
+        <title>No. 1</title>
+        <duration>03:54</duration>
+      </song>
+      <song>
+        <title>MC Hammer</title>
+        <duration>04:59</duration>
+      </song>
+      <song>
+        <title>Blowin' Money Fast</title>
+        <duration>04:10</duration>
+      </song>
+      <song>
+        <title>Aston Martin Music</title>
+        <duration>04:30</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>It's Dark and Hell Is Hot</name>
+    <artist>DMX</artist>
+    <year>1998</year>
+    <producer>Dame Grease</producer>
+    <price>18.39</price>
+    <songs>
+      <song>
+        <title>Ruff Ryders' Anthem</title>
+        <duration>03:34</duration>
+      </song>
+      <song>
+        <title>Look Thru My Eyes</title>
+        <duration>03:50</duration>
+      </song>
+      <song>
+        <title>X-Is Coming</title>
+        <duration>04:18</duration>
+      </song>
+      <song>
+        <title>Damien</title>
+        <duration>03:42</duration>
+      </song>
+      <song>
+        <title>For My Dogs</title>
+        <duration>04:11</duration>
+      </song>
+      <song>
+        <title>The Convo</title>
+        <duration>03:33</duration>
+      </song>
+      <song>
+        <title>Niggaz Done Started Something</title>
+        <duration>05:09</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Get Rich Or Die Tryin'</name>
+    <artist>50 Cent</artist>
+    <year>2003</year>
+    <producer>Dr. Dre</producer>
+    <price>18.50</price>
+    <songs>
+      <song>
+        <title>Many Men</title>
+        <duration>04:16</duration>
+      </song>
+      <song>
+        <title>In da Club</title>
+        <duration>03:13</duration>
+      </song>
+      <song>
+        <title>If I Can't</title>
+        <duration>03:16</duration>
+      </song>
+      <song>
+        <title>P.I.M.P.</title>
+        <duration>04:09</duration>
+      </song>
+      <song>
+        <title>21 Questions</title>
+        <duration>03:44</duration>
+      </song>
+      <song>
+        <title>Don't Push Me</title>
+        <duration>04:08</duration>
+      </song>
+      <song>
+        <title>Wanksta</title>
+        <duration>03:39</duration>
+      </song>
+    </songs>
+  </album>
+</catalog>

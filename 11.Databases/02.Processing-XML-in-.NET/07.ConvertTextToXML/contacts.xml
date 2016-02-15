@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contacts>
+  <person>
+    <name>Eminem</name>
+    <city>St. Joseph</city>
+    <phone>0878373737</phone>
+  </person>
+  <person>
+    <name>DMX</name>
+    <city>Mount Vernon</city>
+    <phone>0886101011</phone>
+  </person>
+  <person>
+    <name>2Pac</name>
+    <city>New York</city>
+    <phone>0898222222</phone>
+  </person>
+  <person>
+    <name>Rick Ross</name>
+    <city>Clarksdale</city>
+    <phone>0878424241</phone>
+  </person>
+  <person>
+    <name>50 Cent</name>
+    <city>Queens</city>
+    <phone>0888505050</phone>
+  </person>
+</contacts>

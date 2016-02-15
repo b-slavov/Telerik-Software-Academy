@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+  <album>
+    <name>The Eminem Show</name>
+    <artist>Eminem</artist>
+  </album>
+  <album>
+    <name>Grand Champ</name>
+    <artist>DMX</artist>
+  </album>
+  <album>
+    <name>All Eyez on Me</name>
+    <artist>2Pac</artist>
+  </album>
+  <album>
+    <name>The Marshall Mathers LP</name>
+    <artist>Eminem</artist>
+  </album>
+  <album>
+    <name>Teflon Don</name>
+    <artist>Rick Ross</artist>
+  </album>
+  <album>
+    <name>It's Dark and Hell Is Hot</name>
+    <artist>DMX</artist>
+  </album>
+  <album>
+    <name>Get Rich Or Die Tryin'</name>
+    <artist>50 Cent</artist>
+  </album>
+</catalog>

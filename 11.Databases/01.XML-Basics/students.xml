@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="style.xslt" ?>
+<students>
+  <student xmlns:students="urn:students-academy-com:ninja">
+    <name>John Snow</name>
+    <sex>Male</sex>
+    <birthDate>1986-12-26</birthDate>
+    <phone>+359886122612</phone>
+    <email>john@snow.com</email>
+    <course>Databases</course>
+    <specialty>Ninja</specialty>
+    <facultyNumber>1122334</facultyNumber>
+    <exams>
+      <exam>
+        <name>JavaScript Applications</name>
+        <tutor>Eddard Stark</tutor>
+        <score>300</score>
+      </exam>
+      <exam>
+        <name>High-Quality Code</name>
+        <tutor>Arya Stark</tutor>
+        <score>95</score>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <name>Ygritte</name>
+    <sex>Female</sex>
+    <birthDate>1987-02-09</birthDate>
+    <phone>+359887020902</phone>
+    <email>ygritte@snow.com</email>
+    <course>Databases</course>
+    <specialty>Ninja</specialty>
+    <facultyNumber>2233445</facultyNumber>
+    <exams>
+      <exam>
+        <name>JavaScript Applications</name>
+        <tutor>Catelyn Stark</tutor>
+        <score>285</score>
+      </exam>
+      <exam>
+        <name>High-Quality Code</name>
+        <tutor>Sansa Stark</tutor>
+        <score>91</score>
+      </exam>
+    </exams>
+  </student>
+</students>
