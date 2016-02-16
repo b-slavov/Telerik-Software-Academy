@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Combinatorics-Binary-Trees", "01.Combinatorics-Binary-Trees\01.Combinatorics-Binary-Trees.csproj", "{A2A164F7-DDBF-43E3-BD3C-5A6CBE711F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Sorting-Algorithm-Songs", "02.Sorting-Algorithm-Songs\02.Sorting-Algorithm-Songs.csproj", "{786A2060-375D-4E75-9425-A55113B73A33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Searching-Algorithm-Precision", "03.Searching-Algorithm-Precision\03.Searching-Algorithm-Precision.csproj", "{EC1BFC4A-DB9D-46EF-8869-897B7A7F9580}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2A164F7-DDBF-43E3-BD3C-5A6CBE711F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A164F7-DDBF-43E3-BD3C-5A6CBE711F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A164F7-DDBF-43E3-BD3C-5A6CBE711F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A164F7-DDBF-43E3-BD3C-5A6CBE711F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{786A2060-375D-4E75-9425-A55113B73A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{786A2060-375D-4E75-9425-A55113B73A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{786A2060-375D-4E75-9425-A55113B73A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{786A2060-375D-4E75-9425-A55113B73A33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC1BFC4A-DB9D-46EF-8869-897B7A7F9580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC1BFC4A-DB9D-46EF-8869-897B7A7F9580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC1BFC4A-DB9D-46EF-8869-897B7A7F9580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC1BFC4A-DB9D-46EF-8869-897B7A7F9580}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
