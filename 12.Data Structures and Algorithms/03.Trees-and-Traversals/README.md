@@ -1,7 +1,7 @@
 1. You are given a **tree of N nodes** represented as a set of `N-1` pairs of nodes (parent node, child node), each in the range (`0..N-1`).
    Example:
    
-   ![Tree](images/tree.png)
+   ![picture](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/12.Data%20Structures%20and%20Algorithms/03.Trees-and-Traversals/images/tree.png)
    
    Write a program to read the tree and find:
    

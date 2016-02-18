@@ -69,4 +69,4 @@
   - Given a starting position (`*`) calculate and fill in the array the minimal distance from this position to any other cell in the array. Use "`u`" for all unreachable cells. 
   - _Example_:
 
-<img src="images/matrices.png" />
+![picture](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/12.Data%20Structures%20and%20Algorithms/02.Linear-Data-Structures/images/matrices.png)
