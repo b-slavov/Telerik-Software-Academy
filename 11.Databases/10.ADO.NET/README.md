@@ -10,7 +10,7 @@
 1.  Write a program that retrieves the images for all categories in the `Northwind` database and stores them as JPG files in the file system.
 1.  Create an Excel file with 2 columns: `name` and `score`:
 
-    ![](https://raw.githubusercontent.com/TelerikAcademy/Databases/master/10.%20ADO.NET/Homework/imgs/excel.png)
+    ![picture](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/11.Databases/10.ADO.NET/pictures/excel.png)
     *   Write a program that reads your MS Excel file through the OLE DB data provider and displays the name and score row by row.
 1.  Implement appending new rows to the Excel file.
 1.  Write a program that reads a string from the console and finds all products that contain this string.
