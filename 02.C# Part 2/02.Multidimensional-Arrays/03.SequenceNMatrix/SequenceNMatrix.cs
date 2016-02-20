@@ -1,111 +1,137 @@
 ﻿using System;
+using System.Linq;
 
 class SequenceNMatrix
 {
-    class MatrixNeighborElementsLocatedSameLine
+    static string LongestSequence(string[,] matrix)
     {
-        static string FindLongestSequence(string[,] m)
+        int currentCount = 1;
+        int bestCount = 0;
+        string itemMostCounted = string.Empty;
+
+        // check rows
+        for (int row = 0; row < matrix.GetLength(0); row++)
         {
-            int max = 0;
-            int currRow = 0;
-            int currCol = 0;
-            int currDiag = 0;
-            int temp = 0;
-            string maxStr = "";
-            for (int rows = 0; rows < m.GetLength(0); rows++)
+            for (int col = 0; col < matrix.GetLength(1) - 1; col++)
             {
-                for (int cols = 0; cols < m.GetLength(1); cols++)
+                if (matrix[row, col] == matrix[row, col + 1])
                 {
-                    string curr = m[rows, cols];
-                    currRow = FindStreak(m, rows, cols, 0);
-                    currDiag = FindStreak(m, rows, cols, 1);
-                    currCol = FindStreak(m, rows, cols, 2);
-                    temp = Math.Max(Math.Max(currRow, currCol), currDiag);
-                    if (temp > max)
-                    {
-                        max = temp;
-                        maxStr = curr;
-                    }
+                    currentCount++;
+                }
+                else
+                {
+                    currentCount = 1;
                 }
 
-                if (max == m.GetLength(0))
+                if (currentCount > bestCount)
                 {
-                    return FormResult(max, maxStr);
+                    bestCount = currentCount;
+                    itemMostCounted = matrix[row, col];
                 }
             }
 
-            return FormResult(max, maxStr);
+            currentCount = 1;
         }
 
-        static string FormResult(int n, string str)
+        // check columns
+        for (int col = 0; col < matrix.GetLength(1); col++)
         {
-            string res = "";
-            for (int i = 0; i < n; i++)
+            for (int row = 0; row < matrix.GetLength(0) - 1; row++)
             {
-                res += str + ", ";
-            }
-            res = res.Substring(0, res.Length - 2);
-            return res;
-        }
-
-        static int FindStreak(string[,] m, int startRow, int startCol, int direction)
-        {
-            int count = -1;
-
-            //Row check
-            if (direction == 0)
-            {
-                count = 1;
-                for (int i = startCol + 1; i < m.GetLength(1); i++)
+                if (matrix[row, col] == matrix[row + 1, col])
                 {
-                    if (m[startRow, i] == m[startRow, startCol])
-                    {
-                        count++;
-                    }
+                    currentCount++;
+                }
+                else
+                {
+                    currentCount = 1;
+                }
+
+                if (currentCount > bestCount)
+                {
+                    bestCount = currentCount;
+                    itemMostCounted = matrix[row, col];
                 }
             }
 
-            //Diagonal check
-            else if (direction == 1)
-            {
-                count = 1;
-                int diagonalSize = (m.GetLength(0) < m.GetLength(1)) ? m.GetLength(0) : m.GetLength(1);
-                for (int i = startCol + 1; i < diagonalSize; i++)
-                {
-                    if (m[i, i] == m[startRow, startCol])
-                    {
-                        count++;
-                    }
-                }
-            }
-
-            //Column check
-            else if (direction == 2)
-            {
-                count = 1;
-                for (int rows = startRow + 1; rows < m.GetLength(0); rows++)
-                {
-                    if (m[rows, startCol] == m[startRow, startCol])
-                    {
-                        count++;
-                    }
-                }
-            }
-
-            return count;
+            currentCount = 1;
         }
 
-        static void Main()
+        // check left-to-right diagonal
+        for (int col = 0; col < matrix.GetLength(1) - 1; col++)
         {
-            string[,] matrix = {{"ha", "fifi", "ho", "hi"},
-                            {"fo", "ha", "hi", "xx"},
-                            {"xxx", "ho", "ha", "xx"}};
-            string[,] matrix2 = {{"s", "qq", "s"},
-                             {"pp", "pp", "s"},
-                             {"pp", "qq", "s"}};
+            for (int row = 0, column = col; row < matrix.GetLength(0) - 1 && column < matrix.GetLength(1) - 1; row++, column++)
+            {
+                if ((matrix[row, column] == matrix[row + 1, column + 1]))
+                {
+                    currentCount++;
+                }
+                else
+                {
+                    currentCount = 1;
+                }
 
-            Console.WriteLine(FindLongestSequence(matrix));
-            Console.WriteLine(FindLongestSequence(matrix2));
+                if (currentCount > bestCount)
+                {
+                    bestCount = currentCount;
+                    itemMostCounted = matrix[row, column];
+                }
+            }
+
+            currentCount = 1;
         }
+
+
+        // check right-to-left diagonal
+        for (int col = matrix.GetLength(1) - 1; col > 0; col--)
+        {
+            for (int row = 0, column = col; row < matrix.GetLength(0) - 1 && column > 0; row++, column--)
+            {
+                if ((matrix[row, column] == matrix[row + 1, column - 1]))
+                {
+                    currentCount++;
+                }
+                else
+                {
+                    currentCount = 1;
+                }
+
+                if (currentCount > bestCount)
+                {
+                    bestCount = currentCount;
+                    itemMostCounted = matrix[row, column];
+                }
+            }
+        }
+
+        return string.Join(", ", Enumerable.Repeat(itemMostCounted, bestCount).ToArray());
+    }
+
+    static void Main()
+    {
+        string[,] firstExample =
+        {
+            { "ha", "fifi", "ho", "hi" },
+            { "fo", "ha", "hi", "xx" },
+            { "xxx", "ho", "ha", "xx" }
+        };
+
+        string[,] secondExample =
+        {
+            { "s", "qq", "s" },
+            { "pp", "pp", "s" },
+            { "pp", "qq", "s" }
+        };
+
+        string[,] thirdExample =
+        {
+            { "abc", "def", "wat", "ghi" },
+            { "jkl", "wat", "mno", "prs" },
+            { "wat", "tuv", "wxy", "zzz" }
+        };
+
+        Console.WriteLine(LongestSequence(firstExample));
+        Console.WriteLine(LongestSequence(secondExample));
+        Console.WriteLine(LongestSequence(thirdExample));
     }
 }
