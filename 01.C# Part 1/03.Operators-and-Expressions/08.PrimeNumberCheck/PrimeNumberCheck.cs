@@ -4,13 +4,12 @@ class PrimeNumberCheck
 {
     static void Main()
     {
-        Console.Write("Enter a number: ");
         int number = int.Parse(Console.ReadLine());
 
-        bool prime = true;
+        bool isPrime = true;
         if (number < 2)
         {
-            prime = false;
+            isPrime = false;
         }
         else
         {
@@ -18,11 +17,18 @@ class PrimeNumberCheck
             {
                 if (number % i == 0)
                 {
-                    prime = false;
+                    isPrime = false;
                 }
             }
         }
 
-        Console.WriteLine(number + " is prime -> " + prime);
+        if (isPrime)
+        {
+            Console.WriteLine("true");
+        }
+        else
+        {
+            Console.WriteLine("false");
+        }
     }
 }

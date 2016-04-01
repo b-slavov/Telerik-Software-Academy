@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Globalization;
-using System.Threading;
 
 class PointInsideACircleAndOutsideOfARectangle
 {
     static void Main()
     {
-        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-
-        Console.Write("Enter point x: ");
         decimal x = decimal.Parse(Console.ReadLine());
-        Console.Write("Enter point y: ");
         decimal y = decimal.Parse(Console.ReadLine());
 
         decimal centerX = 1m;
@@ -23,17 +17,26 @@ class PointInsideACircleAndOutsideOfARectangle
         decimal bottomY = -1m;
 
         bool isInCircle = ((x - centerX) * (x - centerX)) + ((y - centerY) * (y - centerY)) <= (r * r);
-        bool isOutsideOfRectangle = (x <= leftX || x >= rightX) && (y >= topY || y <= bottomY);
+        bool isInRectangle = (x >= leftX && x <= rightX) && (y <= topY && y >= bottomY);
 
-        bool result = isInCircle && isOutsideOfRectangle;
+        bool result = isInCircle && isInRectangle;
 
-        if (result)
+        if (isInCircle)
         {
-            Console.WriteLine("yes");
+            Console.Write("inside circle ");
         }
         else
         {
-            Console.WriteLine("no");
+            Console.Write("outside circle ");
+        }
+
+        if (isInRectangle)
+        {
+            Console.WriteLine("inside rectangle");
+        }
+        else
+        {
+            Console.WriteLine("outside rectangle");
         }
     }
 }

@@ -4,7 +4,6 @@ class ExtractThirdBit
 {
     static void Main()
     {
-        Console.Write("Enter a number: ");
         int number = int.Parse(Console.ReadLine());
 
         int position = 3;
@@ -12,6 +11,6 @@ class ExtractThirdBit
         int result = number & mask;
         int bit = result >> position;
 
-        Console.WriteLine("Third bit is: " + bit);
+        Console.WriteLine(bit);
     }
 }
