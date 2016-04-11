@@ -23,6 +23,11 @@ class PrintCompanyInformation
         Console.Write("Manager phone: ");
         string managerPhone = Console.ReadLine();
 
-        Console.WriteLine("\n{0}\nAdress: {1}\nTel. {2}\nFax: {3}\nWeb Site: {4}\nManager: {5} {6} (age: {7}, tel. {8})", companyName, companyAddress, companyPhone, companyFax, companyWebSite, managerFirstName, managerLasttName, managerAge, managerPhone);
+        if (companyFax == string.Empty)
+        {
+            companyFax = "(no fax)";
+        }
+
+        Console.WriteLine("\n{0}\nAddress: {1}\nTel. {2}\nFax: {3}\nWeb site: {4}\nManager: {5} {6} (age: {7}, tel. {8})", companyName, companyAddress, companyPhone, companyFax, companyWebSite, managerFirstName, managerLasttName, managerAge, managerPhone);
     }
 }
