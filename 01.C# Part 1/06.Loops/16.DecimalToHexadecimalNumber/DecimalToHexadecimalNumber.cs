@@ -4,7 +4,6 @@ class DecimalToHexadecimalNumber
 {
     static void Main()
     {
-        Console.Write("decimal: ");
         long decNumber = long.Parse(Console.ReadLine());
 
         string hexNumber = string.Empty;
@@ -32,6 +31,6 @@ class DecimalToHexadecimalNumber
             }
         }
 
-        Console.WriteLine("hexadecimal: " + hexNumber);
+        Console.WriteLine(hexNumber);
     }
 }

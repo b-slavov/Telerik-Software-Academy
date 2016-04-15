@@ -4,7 +4,6 @@ class BinaryToDecimalNumber
 {
     static void Main()
     {
-        Console.Write("binary: ");
         string binaryNumber = Console.ReadLine();
 
         long decimalNumber = 0;
@@ -17,6 +16,6 @@ class BinaryToDecimalNumber
             power *= 2;
         }
 
-        Console.WriteLine("decimal: " + decimalNumber);
+        Console.WriteLine(decimalNumber);
     }
 }

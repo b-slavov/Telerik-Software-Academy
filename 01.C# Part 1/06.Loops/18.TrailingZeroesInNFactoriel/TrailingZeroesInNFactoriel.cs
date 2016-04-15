@@ -4,7 +4,6 @@ class TrailingZeroesInNFactoriel
 {
     static void Main()
     {
-        Console.Write("n = ");
         int n = int.Parse(Console.ReadLine());
 
         int zeroCount = 0;
@@ -20,6 +19,6 @@ class TrailingZeroesInNFactoriel
             }
         }
 
-        Console.WriteLine("Trailing zeroes of n!: " + zeroCount);
+        Console.WriteLine(zeroCount);
     }
 }

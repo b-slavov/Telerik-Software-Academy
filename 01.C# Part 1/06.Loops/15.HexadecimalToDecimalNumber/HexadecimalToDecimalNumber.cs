@@ -4,7 +4,6 @@ class HexadecimalToDecimalNumber
 {
     static void Main()
     {
-        Console.Write("hexadecimal: ");
         string hexNumber = Console.ReadLine();
 
         long decNumber = 0;
@@ -28,6 +27,6 @@ class HexadecimalToDecimalNumber
             power *= 16;
         }
 
-        Console.WriteLine("decimal: " + decNumber);
+        Console.WriteLine(decNumber);
     }
 }

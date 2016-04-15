@@ -4,10 +4,9 @@ class CalculateGCD
 {
     static void Main()
     {
-        Console.Write("a = ");
-        int a = int.Parse(Console.ReadLine());
-        Console.Write("b = ");
-        int b = int.Parse(Console.ReadLine());
+        string[] array = Console.ReadLine().Split(' ');
+        int a = int.Parse(array[0]);
+        int b = int.Parse(array[1]);
 
         int remainder = a % b;
 
@@ -18,6 +17,6 @@ class CalculateGCD
             remainder = a % b;
         }
 
-        Console.WriteLine("GCD = " + b);
+        Console.WriteLine(Math.Abs(b));
     }
 }

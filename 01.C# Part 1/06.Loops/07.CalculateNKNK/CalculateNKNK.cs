@@ -5,9 +5,7 @@ class CalculateNKNK
 {
     static void Main()
     {
-        Console.Write("n = ");
         int n = int.Parse(Console.ReadLine());
-        Console.Write("k = ");
         int k = int.Parse(Console.ReadLine());
 
         BigInteger numerator = 1;
@@ -23,6 +21,6 @@ class CalculateNKNK
             denuminator = denuminator * j;
         }
 
-        Console.WriteLine("n! / (k! * (n-k)!) = " + (numerator / denuminator));
+        Console.WriteLine(numerator / denuminator);
     }
 }

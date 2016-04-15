@@ -5,7 +5,6 @@ class CatalanNumbers
 {
     static void Main()
     {
-        Console.Write("n = ");
         int n = int.Parse(Console.ReadLine());
 
         BigInteger numerator = 1;
@@ -21,6 +20,6 @@ class CatalanNumbers
             denuminator *= i;
         }
 
-        Console.WriteLine("(2 * n)! / ((n + 1)! * n!) = " + (numerator / denuminator));
+        Console.WriteLine(numerator / denuminator);
     }
 }

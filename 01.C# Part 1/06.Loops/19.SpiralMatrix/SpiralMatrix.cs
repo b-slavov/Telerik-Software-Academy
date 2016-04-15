@@ -4,71 +4,80 @@ class SpiralMatrix
 {
     static void Main()
     {
-        Console.SetWindowSize(100, 30);
         int n = int.Parse(Console.ReadLine());
 
-        Console.Clear();
         int[,] matrix = new int[n, n];
-        int row = 0;
-        int col = 0;
-        int value = 1;
-
-        if (n > 0 && n < 21)
+        bool[,] usedPlaces = new bool[n, n];
+        int currentValue = 1;
+        int currentRow = 0;
+        int currentCol = 0;
+        string direction = "right";
+        while (currentValue <= n * n)
         {
-            while (value <= n * n)
+            matrix[currentRow, currentCol] = currentValue;
+            usedPlaces[currentRow, currentCol] = true;
+            currentValue++;
+            if (direction == "right")
             {
-                while (col < matrix.GetLength(0) && matrix[col, row] == 0)
+                if (currentCol == n - 1 || usedPlaces[currentRow, currentCol + 1] == true)
                 {
-                    matrix[row, col++] = value;
-                    value++;
+                    direction = "down";
+                    currentRow++;
+                }
+                else
+                {
+                    currentCol++;
                 }
 
-                col--;
-                row++;
-
-                while (row < matrix.GetLength(1) && matrix[row, col] == 0)
-                {
-                    matrix[row++, col] = value;
-                    value++;
-                }
-
-                row--;
-                col--;
-
-                while (col >= 0 && matrix[row, col] == 0)
-                {
-                    matrix[row, col--] = value;
-                    value++;
-                }
-
-                col++;
-                row--;
-
-                while (row >= 0 && matrix[row, col] == 0)
-                {
-                    matrix[row--, col] = value;
-                    value++;
-                }
-
-                col++;
-                row++;
             }
-
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            else if (direction == "down")
             {
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                if (currentRow == n - 1 || usedPlaces[currentRow + 1, currentCol] == true)
                 {
-                    Console.SetCursorPosition(j * 5, i * 2);
-                    Console.Write(matrix[i, j]);
+                    direction = "left";
+                    currentCol--;
                 }
-
-                Console.WriteLine();
+                else
+                {
+                    currentRow++;
+                }
+            }
+            else if (direction == "left")
+            {
+                if (currentCol == 0 || usedPlaces[currentRow, currentCol - 1] == true)
+                {
+                    direction = "up";
+                    currentRow--;
+                }
+                else
+                {
+                    currentCol--;
+                }
+            }
+            else if (direction == "up")
+            {
+                if (currentRow == 0 || usedPlaces[currentRow - 1, currentCol] == true)
+                {
+                    direction = "right";
+                    currentCol++;
+                }
+                else
+                {
+                    currentRow--;
+                }
             }
         }
 
-        else
+        for (int row = 0; row < matrix.GetLength(0); row++)
         {
-            Console.WriteLine("out of range");
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                Console.Write("{0} ", matrix[row, col]);
+            }
+
+            Console.WriteLine();
         }
+
+        Console.WriteLine();
     }
 }

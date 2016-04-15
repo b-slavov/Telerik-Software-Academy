@@ -4,34 +4,32 @@ class OddAndEvenProduct
 {
     static void Main()
     {
+        Console.ReadLine();
         string[] array = Console.ReadLine().Split(' ');
 
-        int oddProduct = 1;
-        int evenProduct = 1;
+        long oddProduct = 1;
+        long evenProduct = 1;
 
-        for (int index = 0; index < array.Length; index++)
+        for (int i = 0; i < array.Length; i++)
         {
-            int number = int.Parse(array[index]);
-            if (index % 2 == 0)
+            int number = int.Parse(array[i]);
+            if (i % 2 == 0)
             {
-                oddProduct *= number;
+                evenProduct *= number;
             }
             else
             {
-                evenProduct *= number;
+                oddProduct *= number;
             }
         }
 
         if (oddProduct == evenProduct)
         {
-            Console.WriteLine("yes");
-            Console.WriteLine("product = {0}", oddProduct);
+            Console.WriteLine("yes " + oddProduct);
         }
         else
         {
-            Console.WriteLine("no");
-            Console.WriteLine("odd procuct = {0}", oddProduct);
-            Console.WriteLine("even procuct = {0}", evenProduct);
+            Console.WriteLine("no {0} {1}", evenProduct, oddProduct);
         }
     }
 }
