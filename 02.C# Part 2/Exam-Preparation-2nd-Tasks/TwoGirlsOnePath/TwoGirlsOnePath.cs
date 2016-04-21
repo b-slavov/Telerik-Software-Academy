@@ -1,73 +1,63 @@
 ﻿using System;
-using System.Numerics;
 using System.Linq;
+using System.Numerics;
 
 class TwoGirlsOnePath
 {
     static void Main()
     {
-        var field = Console.ReadLine().Split(' ').Select(x => BigInteger.Parse(x)).ToArray();
+        BigInteger[] gameField = Console.ReadLine().Split(' ').Select(BigInteger.Parse).ToArray();
 
-        // initialize variables
-        int positionOfMolly = 0;
-        int positionOfDolly = field.Length - 1;
+        BigInteger mollyFlowers = 0;
+        BigInteger dollyFlowers = 0;
 
-        BigInteger basketOfMolly = 0;
-        BigInteger basketOfDolly = 0;
+        int mollyIndex = 0;
+        int dollyIndex = gameField.Length - 1;
 
-        // start playing
-        while (field[positionOfMolly] != 0 && field[positionOfDolly] != 0)
+        while (true)
         {
-            BigInteger nextMollyStep = field[positionOfMolly];
-            BigInteger nextDollyStep = field[positionOfDolly];
-
-            // collect flowers
-            if (positionOfMolly != positionOfDolly)
+            BigInteger mollyJumps = gameField[mollyIndex];
+            BigInteger dollyJumps = gameField[dollyIndex];
+            if (mollyIndex != dollyIndex)
             {
-                basketOfMolly += field[positionOfMolly];
-                basketOfDolly += field[positionOfDolly];
+                mollyFlowers += gameField[mollyIndex];
+                dollyFlowers += gameField[dollyIndex];
+                if (gameField[mollyIndex] == 0 || gameField[dollyIndex] == 0)
+                {
+                    break;
+                }
 
-                field[positionOfMolly] = 0;
-                field[positionOfDolly] = 0;
+                gameField[mollyIndex] = 0;
+                gameField[dollyIndex] = 0;
             }
             else
             {
-                basketOfMolly += field[positionOfMolly] / 2;
-                basketOfDolly += field[positionOfDolly] / 2;
-
-                field[positionOfMolly] = 1;
-            }
-
-            // jump to next cell
-            var nextMollyPosition = positionOfMolly + nextMollyStep;
-            if (nextMollyPosition > field.Length - 1)
-            {
-                nextMollyPosition = nextMollyPosition % field.Length;
-            }
-            positionOfMolly = (int)nextMollyPosition;
-
-            var nextDollyPosition = positionOfDolly - nextDollyStep;
-            if (nextDollyPosition < 0)
-            {
-                nextDollyPosition = field.Length + (nextDollyPosition % field.Length);
-                if (nextDollyPosition == field.Length)
+                mollyFlowers += gameField[mollyIndex] / 2;
+                dollyFlowers += gameField[dollyIndex] / 2;
+                if (gameField[mollyIndex] == 0 || gameField[dollyIndex] == 0)
                 {
-                    nextDollyPosition = 0;
+                    break;
+                }
+
+                if (gameField[mollyIndex] % 2 == 0)
+                {
+                    gameField[mollyIndex] = 0;
+                }
+                else
+                {
+                    gameField[mollyIndex] = 1;
                 }
             }
 
-            positionOfDolly = (int)nextDollyPosition;
+            mollyIndex = (int)((mollyIndex + mollyJumps) % gameField.Length);
+            dollyIndex = (int)((gameField.Length + ((dollyIndex - dollyJumps) % gameField.Length)) % gameField.Length);
         }
 
-        basketOfMolly += field[positionOfMolly];
-        basketOfDolly += field[positionOfDolly];
-
-        // print result
-        if (field[positionOfMolly] == 0 && field[positionOfDolly] == 0)
+        if (gameField[mollyIndex] == 0 && gameField[dollyIndex] == 0)
         {
             Console.WriteLine("Draw");
         }
-        else if (field[positionOfMolly] == 0)
+        else if (gameField[mollyIndex] == 0)
         {
             Console.WriteLine("Dolly");
         }
@@ -76,6 +66,6 @@ class TwoGirlsOnePath
             Console.WriteLine("Molly");
         }
 
-        Console.WriteLine(basketOfMolly + " " + basketOfDolly);
+        Console.WriteLine("{0} {1}", mollyFlowers, dollyFlowers);
     }
 }
