@@ -4,17 +4,17 @@ class AllocateArray
 {
     static void Main()
     {
-        int[] multipliedArray = new int[20];
-        for (int i = 0; i < 20; i++)
+        int n = int.Parse(Console.ReadLine());
+
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++)
         {
-            if (i != multipliedArray.Length - 1)
-            {
-                Console.Write("{0} ", i * 5);
-            }
-            else
-            {
-                Console.WriteLine(i * 5);
-            }
+            array[i] = i * 5;
+        }
+
+        foreach (var number in array)
+        {
+            Console.WriteLine(number);
         }
     }
 }

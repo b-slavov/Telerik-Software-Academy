@@ -4,13 +4,19 @@ class SelectionSort
 {
     static void Main()
     {
-        int[] arr = { 13, 3, -1, 11, 39, 26, 9, 77, 45, 89 };
-        for (int i = 0; i < arr.Length - 1; i++)
+        int n = int.Parse(Console.ReadLine());
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            array[i] = int.Parse(Console.ReadLine());
+        }
+
+        for (int i = 0; i < array.Length - 1; i++)
         {
             int smallestElement = i;
-            for (int j = i + 1; j < arr.Length; j++)
+            for (int j = i + 1; j < array.Length; j++)
             {
-                if (arr[j] < arr[smallestElement])
+                if (array[j] < array[smallestElement])
                 {
                     smallestElement = j;
                 }
@@ -19,22 +25,15 @@ class SelectionSort
             if (smallestElement != i)
             {
                 int temp = 0;
-                temp = arr[i];
-                arr[i] = arr[smallestElement];
-                arr[smallestElement] = temp;
+                temp = array[i];
+                array[i] = array[smallestElement];
+                array[smallestElement] = temp;
             }
         }
 
-        for (int i = 0; i < arr.Length; i++)
+        foreach (var number in array)
         {
-            if (i != arr.Length - 1)
-            {
-                Console.Write("{0}, ", arr[i]);
-            }
-            else
-            {
-                Console.WriteLine(arr[i]);
-            }
+            Console.WriteLine(number);
         }
     }
 }

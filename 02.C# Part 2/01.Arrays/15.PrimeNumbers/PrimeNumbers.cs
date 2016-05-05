@@ -4,26 +4,24 @@ class PrimeNumbers
 {
     static void Main()
     {
-        bool[] allNums = new bool[10000000];
-        for (int i = 2; i < Math.Sqrt(allNums.Length); i++)
+        int n = int.Parse(Console.ReadLine());
+
+        bool[] numbers = new bool[n + 1];
+        for (int i = 2; i < Math.Sqrt(n); i++)
         {
-            if (allNums[i] == false)
+            for (int j = i * i; j < numbers.Length; j = j + i)
             {
-                for (int j = i * i; j < allNums.Length; j = j + i)
-                {
-                    allNums[j] = true;
-                }
+                numbers[j] = true;
             }
         }
 
-        for (int i = 2; i < allNums.Length; i++)
+        for (int i = n; i >= 0; i--)
         {
-            if (allNums[i] == false)
+            if (numbers[i] == false)
             {
-                Console.Write("{0} ", i);
+                Console.WriteLine(i);
+                break;
             }
         }
-
-        Console.WriteLine();
     }
 }

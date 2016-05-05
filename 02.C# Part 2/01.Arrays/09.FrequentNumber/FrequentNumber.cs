@@ -4,22 +4,20 @@ class FrequentNumber
 {
     static void Main()
     {
-        Console.Write("Enter number of elements: ");
         int n = int.Parse(Console.ReadLine());
-        int[] arr = new int[n];
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            array[i] = int.Parse(Console.ReadLine());
+        }
+
         int maxCount = int.MinValue;
         int currentCount = 1;
         int number = 0;
-        for (int index = 0; index < n; index++)
+        Array.Sort(array);
+        for (int i = 1; i < n; i++)
         {
-            Console.Write("Element [{0}]: ", index);
-            arr[index] = int.Parse(Console.ReadLine());
-        }
-
-        Array.Sort(arr);
-        for (int index = 1; index < n; index++)
-        {
-            if (arr[index] == arr[index - 1])
+            if (array[i] == array[i - 1])
             {
                 currentCount++;
             }
@@ -31,14 +29,14 @@ class FrequentNumber
             if (currentCount > maxCount)
             {
                 maxCount = currentCount;
-                number = arr[index];
+                number = array[i];
             }
         }
 
         if (n == 1)
         {
             maxCount = 1;
-            number = arr[0];
+            number = array[0];
         }
 
         Console.WriteLine("{0} ({1} times)", number, maxCount);

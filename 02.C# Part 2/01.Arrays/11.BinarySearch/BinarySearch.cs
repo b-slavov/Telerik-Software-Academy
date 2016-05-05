@@ -2,46 +2,47 @@
 
 class BinarySearch
 {
-    static void Search(int[] arr, int start, int end, int element)
+    static void Main()
     {
-        if (end <= start)
+        int n = int.Parse(Console.ReadLine());
+
+        int[] sequence = new int[n];
+        for (int i = 0; i < n; i++)
         {
-            Console.WriteLine("Not Found!");
-            return;
+            sequence[i] = int.Parse(Console.ReadLine());
         }
-        else
+
+        int searchingNumber = int.Parse(Console.ReadLine());
+
+        Array.Sort(sequence);
+
+        int iMin = 0;
+        int iMax = sequence.Length - 1;
+        int iMid = sequence.Length / 2;
+        bool foundNumber = false;
+
+        while (iMin <= iMax)
         {
-            int middle = start + (end - start) / 2;
-            if (element < arr[middle])
+            iMid = (iMin + iMax) / 2;
+            if (sequence[iMid] == searchingNumber)
             {
-                Search(arr, start, middle - 1, element);
+                foundNumber = true;
+                Console.WriteLine(iMid);
+                break;
             }
-            else if (element > arr[middle])
+            else if (sequence[iMid] < searchingNumber)
             {
-                Search(arr, middle + 1, end, element);
+                iMin = iMid + 1;
             }
             else
             {
-                Console.WriteLine("The index of {0} is {1}", element, middle);
-                return;
+                iMax = iMid - 1;
             }
         }
-    }
 
-    static void Main()
-    {
-        Console.Write("Enter number of elements: ");
-        int n = int.Parse(Console.ReadLine());
-        int[] arr = new int[n];
-        for (int index = 0; index < n; index++)
+        if (!foundNumber)
         {
-            Console.Write("Enter element {0}: ", index);
-            arr[index] = int.Parse(Console.ReadLine());
+            Console.WriteLine(-1);
         }
-
-        Console.Write("Enter element to search for: ");
-        int element = int.Parse(Console.ReadLine());
-        Array.Sort(arr);
-        Search(arr, 0, arr.Length, element);
     }
 }

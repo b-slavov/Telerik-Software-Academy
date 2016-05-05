@@ -1,25 +1,28 @@
 ﻿using System;
-using System.Linq;
 
 class MaximalSum
 {
     static void Main()
     {
-        Console.Write("Enter a sequence: ");
-        int[] arr = Console.ReadLine().Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(x => int.Parse(x)).ToArray();
+        int n = int.Parse(Console.ReadLine());
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            array[i] = int.Parse(Console.ReadLine());
+        }
 
-        int maxSum = arr[0];
-        int currentSum = arr[0];
+        int maxSum = array[0];
+        int currentSum = array[0];
         int start = 0;
         int startTemp = 0;
         int end = 0;
 
-        for (int i = 1; i < arr.Length; i++)
+        for (int i = 1; i < array.Length; i++)
         {
-            currentSum += arr[i];
-            if (currentSum < arr[i])
+            currentSum += array[i];
+            if (currentSum < array[i])
             {
-                currentSum = arr[i];
+                currentSum = array[i];
                 startTemp = i;
             }
 
@@ -31,17 +34,6 @@ class MaximalSum
             }
         }
 
-        Console.Write("The sequence with maximal sum is: ");
-        for (int i = start; i <= end; i++)
-        {
-            if (i != end)
-            {
-                Console.Write("{0}, ", arr[i]);
-            }
-            else
-            {
-                Console.WriteLine(arr[i]);
-            }
-        }
+        Console.Write(maxSum);
     }
 }

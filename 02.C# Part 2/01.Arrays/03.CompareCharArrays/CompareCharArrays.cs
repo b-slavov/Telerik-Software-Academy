@@ -4,46 +4,39 @@ class CompareCharArrays
 {
     static void Main()
     {
-        char[] firstArray;
-        char[] secondArray;
+        string firstInput = Console.ReadLine();
+        string secondInput = Console.ReadLine();
 
-        Console.Write("Enter first array lenght: ");
-        int n = int.Parse(Console.ReadLine());
-        Console.Write("Enter second array lenght: ");
-        int m = int.Parse(Console.ReadLine());
+        char[] firstCharArray = firstInput.ToCharArray();
+        char[] secondCharArray = secondInput.ToCharArray();
 
-        firstArray = new char[n];
-        secondArray = new char[m];
-
-        if (n == m)
+        if (firstCharArray.Length > secondCharArray.Length)
         {
-            for (int i = 0; i < n; i++)
-            {
-                Console.Write("charArray1[{0}] = ", i);
-                firstArray[i] = Convert.ToChar(Console.ReadLine());
-            }
-
-            for (int j = 0; j < m; j++)
-            {
-                Console.Write("charArray2[{0}] = ", j);
-                secondArray[j] = Convert.ToChar(Console.ReadLine());
-            }
-
-            for (int k = 0; k < n; k++)
-            {
-                if (firstArray[k] == secondArray[k])
-                {
-                    Console.WriteLine("Chars[{0}] are equal.", k);
-                }
-                else
-                {
-                    Console.WriteLine("Chars[{0}] are NOT equal.", k);
-                }
-            }
+            Console.WriteLine(">");
+        }
+        else if (firstCharArray.Length < secondCharArray.Length)
+        {
+            Console.WriteLine("<");
         }
         else
         {
-            Console.WriteLine("Arrays are NOT with equal lenght.");
+            for (int i = 0; i < firstCharArray.Length; i++)
+            {
+                if (firstCharArray[i] > secondCharArray[i])
+                {
+                    Console.WriteLine(">");
+                    break;
+                }
+                else if(firstCharArray[i] < secondCharArray[i])
+                {
+                    Console.WriteLine("<");
+                    break;
+                }
+                else if (i == firstCharArray.Length - 1 && firstCharArray[i] == secondCharArray[i])
+                {
+                    Console.WriteLine("=");
+                }
+            }
         }
     }
 }

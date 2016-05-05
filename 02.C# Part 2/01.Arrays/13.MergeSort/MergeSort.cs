@@ -64,13 +64,17 @@ class MergeSort
 
     static void Main()
     {
-        List<int> array = new List<int> { 23, 7, 111, -5, 39, 47, 6, 369, 81 };
+        int n = int.Parse(Console.ReadLine());
+        List<int> array = new List<int>();
+        for (int i = 0; i < n; i++)
+        {
+            array.Add(int.Parse(Console.ReadLine()));
+        }
+
         List<int> sortedArray = MergeSortAlg(array);
         foreach (var item in sortedArray)
         {
-            Console.Write("{0} ", item);
+            Console.WriteLine(item);
         }
-
-        Console.WriteLine();
     }
 }

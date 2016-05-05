@@ -4,46 +4,30 @@ class MaximalIncreasingSequence
 {
     static void Main()
     {
-        int[] arr = { 3, 2, 3, 4, 2, 2, 4 };
-        int currentLenght = 1;
-        int bestLenght = 0;
-        int endIndex = 0;
-
-        for (int i = 0; i < arr.Length - 1; i++)
+        int n = int.Parse(Console.ReadLine());
+        int previousNumber = int.MinValue;
+        int currentLength = 1;
+        int maxLength = 1;
+        for (int i = 0; i < n; i++)
         {
-            if (arr[i] < arr[i + 1])
+            int currentNumber = int.Parse(Console.ReadLine());
+            if (currentNumber > previousNumber)
             {
-                currentLenght++;
+                currentLength++;
             }
             else
             {
-                if (currentLenght > bestLenght)
-                {
-                    bestLenght = currentLenght;
-                    endIndex = i;
-                }
-
-                currentLenght = 1;
+                currentLength = 1;
             }
-        }
 
-        if (currentLenght > bestLenght)
-        {
-            bestLenght = currentLenght;
-            endIndex = arr.Length - 1;
-        }
-
-        currentLenght = 1;
-        for (int i = endIndex - bestLenght + 1; i < endIndex + 1; i++)
-        {
-            if (i != endIndex)
+            if (currentLength > maxLength)
             {
-                Console.Write("{0}, ", arr[i]);
+                maxLength = currentLength;
             }
-            else
-            {
-                Console.WriteLine(arr[i]);
-            }
+
+            previousNumber = currentNumber;
         }
+
+        Console.WriteLine(maxLength);
     }
 }
