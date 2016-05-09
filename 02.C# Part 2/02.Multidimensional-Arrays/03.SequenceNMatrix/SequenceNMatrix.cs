@@ -3,11 +3,10 @@ using System.Linq;
 
 class SequenceNMatrix
 {
-    static string LongestSequence(string[,] matrix)
+    static int LongestSequence(int[,] matrix)
     {
         int currentCount = 1;
         int bestCount = 0;
-        string itemMostCounted = string.Empty;
 
         // check rows
         for (int row = 0; row < matrix.GetLength(0); row++)
@@ -26,7 +25,6 @@ class SequenceNMatrix
                 if (currentCount > bestCount)
                 {
                     bestCount = currentCount;
-                    itemMostCounted = matrix[row, col];
                 }
             }
 
@@ -50,7 +48,6 @@ class SequenceNMatrix
                 if (currentCount > bestCount)
                 {
                     bestCount = currentCount;
-                    itemMostCounted = matrix[row, col];
                 }
             }
 
@@ -74,7 +71,6 @@ class SequenceNMatrix
                 if (currentCount > bestCount)
                 {
                     bestCount = currentCount;
-                    itemMostCounted = matrix[row, column];
                 }
             }
 
@@ -99,39 +95,28 @@ class SequenceNMatrix
                 if (currentCount > bestCount)
                 {
                     bestCount = currentCount;
-                    itemMostCounted = matrix[row, column];
                 }
             }
         }
 
-        return string.Join(", ", Enumerable.Repeat(itemMostCounted, bestCount).ToArray());
+        return bestCount;
     }
 
     static void Main()
     {
-        string[,] firstExample =
+        int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        int rows = input[0];
+        int cols = input[1];
+        int[,] matrix = new int[rows, cols];
+        for (int row = 0; row < rows; row++)
         {
-            { "ha", "fifi", "ho", "hi" },
-            { "fo", "ha", "hi", "xx" },
-            { "xxx", "ho", "ha", "xx" }
-        };
+            int[] inputRow = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            for (int col = 0; col < cols; col++)
+            {
+                matrix[row, col] = inputRow[col];
+            }
+        }
 
-        string[,] secondExample =
-        {
-            { "s", "qq", "s" },
-            { "pp", "pp", "s" },
-            { "pp", "qq", "s" }
-        };
-
-        string[,] thirdExample =
-        {
-            { "abc", "def", "wat", "ghi" },
-            { "jkl", "wat", "mno", "prs" },
-            { "wat", "tuv", "wxy", "zzz" }
-        };
-
-        Console.WriteLine(LongestSequence(firstExample));
-        Console.WriteLine(LongestSequence(secondExample));
-        Console.WriteLine(LongestSequence(thirdExample));
+        Console.WriteLine(LongestSequence(matrix));
     }
 }

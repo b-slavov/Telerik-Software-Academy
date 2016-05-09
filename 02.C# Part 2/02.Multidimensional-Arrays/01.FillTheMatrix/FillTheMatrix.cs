@@ -5,10 +5,14 @@ class FillTheMatrix
     static void Main()
     {
         int n = int.Parse(Console.ReadLine());
-        BuildFirstMatrix(n);
-        BuildSecondMatrix(n);
-        BuildThirdMatrix(n);
-        BuildFourthMatrix(n);
+        char letter = char.Parse(Console.ReadLine());
+        switch (letter)
+        {
+            case 'a': BuildFirstMatrix(n); break;
+            case 'b': BuildSecondMatrix(n); break;
+            case 'c': BuildThirdMatrix(n); break;
+            case 'd': BuildFourthMatrix(n); break;
+        }
     }
 
     static void BuildFirstMatrix(int n)
@@ -159,17 +163,20 @@ class FillTheMatrix
 
     static void PrintMatrix(int[,] matrix)
     {
-        Console.WriteLine();
         for (int row = 0; row < matrix.GetLength(0); row++)
         {
             for (int col = 0; col < matrix.GetLength(1); col++)
             {
-                Console.Write("{0,-2} ", matrix[row, col]);
+                Console.Write(matrix[row, col]);
+                if (col < matrix.GetLength(1) - 1)
+                {
+                    Console.Write(" ");
+                }
+                else
+                {
+                    Console.WriteLine();
+                }
             }
-
-            Console.WriteLine();
         }
-
-        Console.WriteLine();
     }
 }
