@@ -7,35 +7,23 @@ class CompareCharArrays
         string firstInput = Console.ReadLine();
         string secondInput = Console.ReadLine();
 
-        char[] firstCharArray = firstInput.ToCharArray();
-        char[] secondCharArray = secondInput.ToCharArray();
+        int loopLength = Math.Min(firstInput.Length, secondInput.Length);
 
-        if (firstCharArray.Length > secondCharArray.Length)
+        for (int i = 0; i < loopLength; i++)
         {
-            Console.WriteLine(">");
-        }
-        else if (firstCharArray.Length < secondCharArray.Length)
-        {
-            Console.WriteLine("<");
-        }
-        else
-        {
-            for (int i = 0; i < firstCharArray.Length; i++)
+            if (firstInput[i] > secondInput[i] || i == loopLength - 1 && firstInput.Length > secondInput.Length)
             {
-                if (firstCharArray[i] > secondCharArray[i])
-                {
-                    Console.WriteLine(">");
-                    break;
-                }
-                else if(firstCharArray[i] < secondCharArray[i])
-                {
-                    Console.WriteLine("<");
-                    break;
-                }
-                else if (i == firstCharArray.Length - 1 && firstCharArray[i] == secondCharArray[i])
-                {
-                    Console.WriteLine("=");
-                }
+                Console.WriteLine(">");
+                return;
+            }
+            else if (firstInput[i] < secondInput[i] || i == loopLength - 1 && firstInput.Length < secondInput.Length)
+            {
+                Console.WriteLine("<");
+                return;
+            }
+            else if (i == loopLength - 1 && firstInput.Length == secondInput.Length)
+            {
+                Console.WriteLine("=");
             }
         }
     }
