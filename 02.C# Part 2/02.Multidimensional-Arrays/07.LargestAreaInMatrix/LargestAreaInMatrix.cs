@@ -1,70 +1,68 @@
 ﻿using System;
+using System.Linq;
 
 class LargestAreaInMatrix
 {
-    //Depth-first search algorithm
-    public static bool[,] isVisited = new bool[5, 6];
-    public static int maxCount = int.MinValue;
-
-    public static int DFS(byte[,] matrix, int currentRow, int currentCol, byte lastElement)
+    static int DFS(int[,] matrix, int row, int col, bool[,] visited)
     {
-        int result = 0;
-
-        if (!(-1 < currentRow && currentRow < matrix.GetLength(0)))
+        int result = 1;
+        visited[row, col] = true;
+        if (row - 1 >= 0 && matrix[row - 1, col] == matrix[row, col] && !visited[row - 1, col])
         {
-            return result;
+            result += DFS(matrix, row - 1, col, visited);
         }
 
-        if (!(-1 < currentCol && currentCol < matrix.GetLength(1)))
+        if (row + 1 < matrix.GetLength(0) && matrix[row + 1, col] == matrix[row, col] && !visited[row + 1, col])
         {
-            return result;
+            result += DFS(matrix, row + 1, col, visited);
         }
 
-        if (isVisited[currentRow, currentCol])
+        if (col - 1 >= 0 && matrix[row, col - 1] == matrix[row, col] && !visited[row, col - 1])
         {
-            return result;
+            result += DFS(matrix, row, col - 1, visited);
         }
 
-        if (matrix[currentRow, currentCol] != lastElement)
+        if (col + 1 < matrix.GetLength(1) && matrix[row, col + 1] == matrix[row, col] && !visited[row, col + 1])
         {
-            return result;
+            result += DFS(matrix, row, col + 1, visited);
         }
-
-        isVisited[currentRow, currentCol] = true;
-
-        result = 1;
-
-        result += DFS(matrix, currentRow, currentCol + 1, matrix[currentRow, currentCol]);
-        result += DFS(matrix, currentRow, currentCol - 1, matrix[currentRow, currentCol]);
-        result += DFS(matrix, currentRow + 1, currentCol, matrix[currentRow, currentCol]);
-        result += DFS(matrix, currentRow - 1, currentCol, matrix[currentRow, currentCol]);
 
         return result;
     }
 
     static void Main()
     {
-        byte[,] matrix =
+        int[] rowsAndCols = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        int rows = rowsAndCols[0];
+        int cols = rowsAndCols[1];
+        int[,] matrix = new int[rows, cols];
+        for (int row = 0; row < rows; row++)
         {
-           {1, 3, 2, 2, 2, 4},
-           {3, 3, 3, 2, 4, 4},
-           {4, 3, 1, 2, 3, 3},
-           {4, 3, 1, 3, 3, 1},
-           {4, 3, 3, 3, 1, 1}
-        };
-
-        for (int rows = 0; rows < matrix.GetLength(0); rows++)
-        {
-            for (int cols = 0; cols < matrix.GetLength(1); cols++)
+            int[] inputRow = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            for (int col = 0; col < cols; col++)
             {
-                if (!isVisited[rows, cols])
-                {
-                    int current = DFS(matrix, rows, cols, matrix[rows, cols]);
-                    maxCount = Math.Max(current, maxCount);
-                }
+                matrix[row, col] = inputRow[col];
             }
         }
 
-        Console.WriteLine("Number of neighbour elements: {0}", maxCount);
+        bool[,] visited = new bool[rows, cols];
+        int maxCount = 0;
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < cols; col++)
+            {
+                if (!visited[row, col])
+                {
+                    int count = DFS(matrix, row, col, visited);
+                    if (maxCount < count)
+                    {
+                        maxCount = count;
+                    }
+                }
+
+            }
+        }
+
+        Console.WriteLine(maxCount);
     }
 }
