@@ -2,9 +2,9 @@
 
 class DecimalToHexadecimal
 {
-    static string DecimalToHexadecimalFunc(int number)
+    static string DecimalToHexadecimalFunc(long number)
     {
-        int remainder;
+        long remainder;
         string result = string.Empty;
 
         while (number > 0)
@@ -20,29 +20,14 @@ class DecimalToHexadecimal
             {
                 switch (remainder)
                 {
-                    case 10:
-                        result = "A" + result;
-                        break;
-                    case 11:
-                        result = "B" + result;
-                        break;
-                    case 12:
-                        result = "C" + result;
-                        break;
-                    case 13:
-                        result = "D" + result;
-                        break;
-                    case 14:
-                        result = "E" + result;
-                        break;
-                    case 15:
-                        result = "F" + result;
-                        break;
-                    default:
-                        break;
+                    case 10: result = "A" + result; break;
+                    case 11: result = "B" + result; break;
+                    case 12: result = "C" + result; break;
+                    case 13: result = "D" + result; break;
+                    case 14: result = "E" + result; break;
+                    case 15: result = "F" + result; break;
                 }
             }
-
         }
 
         return result;
@@ -50,9 +35,8 @@ class DecimalToHexadecimal
 
     static void Main()
     {
-        Console.Write("Enter decimal number: ");
-        int number = int.Parse(Console.ReadLine());
+        long number = long.Parse(Console.ReadLine());
 
-        Console.WriteLine("Hexadecimal representation: " + DecimalToHexadecimalFunc(number));
+        Console.WriteLine(DecimalToHexadecimalFunc(number));
     }
 }

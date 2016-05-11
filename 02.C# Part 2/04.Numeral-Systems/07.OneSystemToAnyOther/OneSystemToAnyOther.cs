@@ -4,60 +4,37 @@ class OneSystemToAnyOther
 {
     static string ConvertNumeralSystem(string value, int base1, int base2)
     {
-        ulong decRepresentation = 0;
-
+        long decRepresentation = 0;
         for (int i = value.Length - 1; i >= 0; i--)
         {
             if (char.IsDigit(value[i]))
             {
-                decRepresentation += (ulong)((value[i] - '0') * Math.Pow(base1, value.Length - i - 1));
+                decRepresentation += long.Parse(value[i].ToString()) * Power(base1, value.Length - i - 1);
             }
             else
             {
-                int num = 0;
+                long number = 0;
 
                 switch (value[i])
                 {
-                    case 'a':
-                    case 'A':
-                        num = 10;
-                        break;
-                    case 'b':
-                    case 'B':
-                        num = 11;
-                        break;
-                    case 'c':
-                    case 'C':
-                        num = 12;
-                        break;
-                    case 'd':
-                    case 'D':
-                        num = 13;
-                        break;
-                    case 'e':
-                    case 'E':
-                        num = 14;
-                        break;
-                    case 'f':
-                    case 'F':
-                        num = 15;
-                        break;
-                    default:
-                        break;
+                    case 'A': number = 10; break;
+                    case 'B': number = 11; break;
+                    case 'C': number = 12; break;
+                    case 'D': number = 13; break;
+                    case 'E': number = 14; break;
+                    case 'F': number = 15; break;
                 }
 
-                decRepresentation += (ulong)(num * Math.Pow(base1, value.Length - i - 1));
+                decRepresentation += number * Power(base1, value.Length - i - 1);
             }
         }
 
-        ulong remainder;
+        long remainder;
         string result = string.Empty;
-
         while (decRepresentation > 0)
         {
-            remainder = (ulong)(decRepresentation % (ulong)base2);
-            decRepresentation /= (ulong)base2;
-
+            remainder = decRepresentation % base2;
+            decRepresentation /= base2;
             if (remainder < 10)
             {
                 result = remainder.ToString() + result;
@@ -66,26 +43,12 @@ class OneSystemToAnyOther
             {
                 switch (remainder)
                 {
-                    case 10:
-                        result = "A" + result;
-                        break;
-                    case 11:
-                        result = "B" + result;
-                        break;
-                    case 12:
-                        result = "C" + result;
-                        break;
-                    case 13:
-                        result = "D" + result;
-                        break;
-                    case 14:
-                        result = "E" + result;
-                        break;
-                    case 15:
-                        result = "F" + result;
-                        break;
-                    default:
-                        break;
+                    case 10: result = "A" + result; break;
+                    case 11: result = "B" + result; break;
+                    case 12: result = "C" + result; break;
+                    case 13: result = "D" + result; break;
+                    case 14: result = "E" + result; break;
+                    case 15: result = "F" + result; break;
                 }
             }
         }
@@ -93,22 +56,23 @@ class OneSystemToAnyOther
         return result;
     }
 
+    static long Power(long number, long power)
+    {
+        long result = 1;
+        for (int i = 0; i < power; i++)
+        {
+            result *= number;
+        }
+
+        return result;
+    }
+
     static void Main()
     {
-        Console.Write("S = ");
-        int s = int.Parse(Console.ReadLine());
-        Console.Write("D = ");
-        int d = int.Parse(Console.ReadLine());
-        Console.Write("Value = ");
-        string value = Console.ReadLine();
+        int base1 = int.Parse(Console.ReadLine());
+        string numberInBase1 = Console.ReadLine();
+        int base2 = int.Parse(Console.ReadLine());
 
-        if ((s < 2) || (d > 16))
-        {
-            Console.WriteLine("Invalid value!");
-        }
-        else
-        {
-            Console.WriteLine("Value {0} in {1} system = Value {2} in {3} system.", value, s, ConvertNumeralSystem(value, s, d), d);
-        }
+        Console.WriteLine(ConvertNumeralSystem(numberInBase1, base1, base2));
     }
 }

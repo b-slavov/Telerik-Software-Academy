@@ -2,13 +2,13 @@
 
 class BinaryToDecimal
 {
-    static int BinaryToDecimalFunc(string number)
+    static long BinaryToDecimalFunc(string number)
     {
-        int result = 0;
+        long result = 0;
 
         for (int i = number.Length - 1; i >= 0; i--)
         {
-            result += (int)((number[i] - '0') * Math.Pow(2, number.Length - i - 1));
+            result += (long)((number[i] - '0') * Math.Pow(2, number.Length - i - 1));
         }
 
         return result;
@@ -16,9 +16,8 @@ class BinaryToDecimal
 
     static void Main()
     {
-        Console.Write("Enter binary number: ");
         string number = Console.ReadLine();
 
-        Console.WriteLine("Decimal representation: " + BinaryToDecimalFunc(number));
+        Console.WriteLine(BinaryToDecimalFunc(number));
     }
 }

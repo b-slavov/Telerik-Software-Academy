@@ -2,9 +2,9 @@
 
 class DecimalToBinary
 {
-    static string DecimalToBinaryFunc(int number)
+    static string DecimalToBinaryFunc(long number)
     {
-        int remainder;
+        long remainder;
         string result = string.Empty;
 
         while (number > 0)
@@ -19,8 +19,7 @@ class DecimalToBinary
 
     static void Main()
     {
-        Console.Write("Enter decimal number: ");
-        int number = int.Parse(Console.ReadLine());
-        Console.WriteLine("Binary representation: " + DecimalToBinaryFunc(number));
+        long number = long.Parse(Console.ReadLine());
+        Console.WriteLine(DecimalToBinaryFunc(number));
     }
 }
