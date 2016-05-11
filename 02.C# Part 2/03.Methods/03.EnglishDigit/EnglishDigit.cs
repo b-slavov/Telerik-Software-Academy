@@ -31,8 +31,7 @@ class EnglishDigit
 
     static void Main()
     {
-        Console.Write("Enter number: ");
         int number = int.Parse(Console.ReadLine());
-        Console.WriteLine("The last digit is " + ReturnLastDigitAsWord(number));
+        Console.WriteLine(ReturnLastDigitAsWord(number));
     }
 }

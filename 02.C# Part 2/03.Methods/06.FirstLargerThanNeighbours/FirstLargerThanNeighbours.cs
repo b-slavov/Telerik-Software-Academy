@@ -1,37 +1,25 @@
 ﻿using System;
+using System.Linq;
 
 class FirstLargerThanNeighbours
 {
-    static bool CheckIfLargerThanNeighbours(int[] array, int index)
+    static int CheckFirstLargerThanNeighbours(int[] array)
     {
-        if ((index <= 0) || (index >= array.Length - 1))
+        for (int i = 1; i < array.Length - 1; i++)
         {
-            return false;
+            if (array[i] > array[i - 1] && array[i] > array[i + 1])
+            {
+                return i;
+            }
         }
-        else if ((array[index] > array[index + 1]) && (array[index] > array[index - 1]))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+
+        return -1;
     }
 
     static void Main()
     {
-        int[] arr = { 3, 5, 4, 2, 3, 1, 3, 6, 3, 3, 1, 7, 3, 1, 3, 3, 3, 5, 8, 6, 9, 4, 2, 3, 1, 3, 3, 3, 7, 3 };
-        int result = -1;
-
-        for (int i = 0; i < arr.Length; i++)
-        {
-            if (true == CheckIfLargerThanNeighbours(arr, i))
-            {
-                result = i;
-                break;
-            }
-        }
-
-        Console.WriteLine(result);
+        Console.ReadLine();
+        var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        Console.WriteLine(CheckFirstLargerThanNeighbours(input));
     }
 }

@@ -1,18 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 class NumberAsArray
 {
-    static void Main()
-    {
-        byte[] firstArray = { 7, 2, 1, 7 };
-        byte[] secondArray = { 4, 3, 1, 5, 3, 8 };
-
-        string total = SumArrays(firstArray, secondArray);
-        Console.WriteLine(total);
-    }
-
     public static string SumArrays(byte[] firstArray, byte[] secondArray)
     {
         List<byte> maxArray = new List<byte>();
@@ -72,14 +64,16 @@ class NumberAsArray
             result.Append(1);
         }
 
-        char[] reversed = (result.ToString()).ToCharArray();
-        result.Clear();
+        return string.Join(" ", result.ToString().ToCharArray());
+    }
 
-        for (int i = reversed.Length - 1; i >= 0; i--)
-        {
-            result = result.Append(reversed[i]);
-        }
+    static void Main()
+    {
+        Console.ReadLine();
+        var firstArray = Console.ReadLine().Split(' ').Select(byte.Parse).ToArray();
+        var secondArray = Console.ReadLine().Split(' ').Select(byte.Parse).ToArray();
 
-        return result.ToString();
+        string total = SumArrays(firstArray, secondArray);
+        Console.WriteLine(total);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 class GetLargestNumber
 {
@@ -9,12 +10,10 @@ class GetLargestNumber
 
     static void Main()
     {
-        Console.WriteLine("a = ");
-        int a = int.Parse(Console.ReadLine());
-        Console.WriteLine("b = ");
-        int b = int.Parse(Console.ReadLine());
-        Console.WriteLine("c = ");
-        int c = int.Parse(Console.ReadLine());
+        var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        int a = input[0];
+        int b = input[1];
+        int c = input[2];
 
         if (GetMax(a, b) > c)
         {

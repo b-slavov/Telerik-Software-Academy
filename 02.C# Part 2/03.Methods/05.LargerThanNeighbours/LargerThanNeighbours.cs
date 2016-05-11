@@ -1,28 +1,26 @@
 ﻿using System;
+using System.Linq;
 
 class LargerThanNeighbours
 {
-    static bool CheckIfLargerThanNeighbours(int[] array, int index)
+    static int HowManyNumbersAreLargerThanNeighbours(int[] array)
     {
-        if ((index <= 0) || (index >= array.Length - 1))
+        int counter = 0;
+        for (int i = 1; i < array.Length - 1; i++)
         {
-            return false;
+            if (array[i] > array[i - 1] && array[i] > array[i + 1])
+            {
+                counter++;
+            }
         }
-        else if ((array[index] > array[index + 1]) && (array[index] > array[index - 1]))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+
+        return counter;
     }
 
     static void Main()
     {
-        int[] arr = { 3, 5, 4, 2, 3, 1, 3, 6, 3, 3, 1, 7, 3, 1, 3, 3, 3, 5, 8, 6, 9, 4, 2, 3, 1, 3, 3, 3, 7, 3 };
-        Console.Write("Enter position: ");
-        int x = int.Parse(Console.ReadLine());
-        Console.WriteLine("{0} is larger than {1} and {2} -> {3}", arr[x], arr[x - 1], arr[x + 1], CheckIfLargerThanNeighbours(arr, x));
+        Console.ReadLine();
+        var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        Console.WriteLine(HowManyNumbersAreLargerThanNeighbours(input));
     }
 }

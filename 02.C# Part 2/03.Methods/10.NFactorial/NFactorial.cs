@@ -5,16 +5,15 @@ class NFactorial
 {
     static void Main()
     {
-        int[] numbersFromOneToHundred = new int[100];
-        for (int i = 0; i < 100; i++)
+        int n = int.Parse(Console.ReadLine());
+
+        int[] numbers = new int[n];
+        for (int i = 0; i < n; i++)
         {
-            numbersFromOneToHundred[i] = i + 1;
+            numbers[i] = i + 1;
         }
 
-        foreach (int number in numbersFromOneToHundred)
-        {
-            Console.WriteLine(CalcualteFactorial(numbersFromOneToHundred, number));
-        }
+        Console.WriteLine(CalcualteFactorial(numbers, n));
 
     }
 
