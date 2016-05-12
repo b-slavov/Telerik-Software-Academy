@@ -41,7 +41,7 @@ class TriangleSurface
                 double b = double.Parse(Console.ReadLine());
                 Console.Write("Enter angle: ");
                 double angle = double.Parse(Console.ReadLine());
-                Console.WriteLine("Area is {0}", (a * b * Math.Sin(angle)) / 2);
+                Console.WriteLine("Area is {0}", (a * b * Math.Sin(Math.PI / 180 * angle)) / 2);
                 break;
 
             default:

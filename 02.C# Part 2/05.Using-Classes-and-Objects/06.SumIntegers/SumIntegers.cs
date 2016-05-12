@@ -1,19 +1,12 @@
 ﻿using System;
+using System.Linq;
 
 class SumIntegers
 {
     static void Main()
     {
-        Console.Write("Enter integer values, separated by space: ");
-        string s = Console.ReadLine();
-        string[] numbers = s.Split(' ');
-        double sum = 0;
+        int[] integers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        foreach (string number in numbers)
-        {
-            sum += double.Parse(number);
-        }
-
-        Console.WriteLine("Sum = " + sum);
+        Console.WriteLine(integers.Sum());
     }
 }

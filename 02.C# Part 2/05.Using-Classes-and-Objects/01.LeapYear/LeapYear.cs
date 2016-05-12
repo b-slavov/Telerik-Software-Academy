@@ -4,9 +4,15 @@ class LeapYear
 {
     static void Main()
     {
-        Console.Write("Enter year: ");
         int year = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Is year leap? {0}", DateTime.IsLeapYear(year));
+        if (DateTime.IsLeapYear(year))
+        {
+            Console.WriteLine("Leap");
+        }
+        else
+        {
+            Console.WriteLine("Common");
+        }
     }
 }
