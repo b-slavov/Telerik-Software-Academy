@@ -5,7 +5,6 @@ class SeriesOfLetters
 {
     static void Main()
     {
-        Console.Write("Enter text: ");
         string input = Console.ReadLine();
 
         input.Distinct().Select(c => c.ToString()).ToList()

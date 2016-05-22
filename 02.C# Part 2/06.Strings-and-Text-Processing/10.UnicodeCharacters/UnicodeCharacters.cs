@@ -4,10 +4,9 @@ class UnicodeCharacters
 {
     static void Main()
     {
-        Console.Write("Enter text: ");
-        string inputText = Console.ReadLine();
+        string text = Console.ReadLine();
 
-        foreach (char symbol in inputText)
+        foreach (char symbol in text)
         {
             Console.Write("\\u{0:X4}", (int)symbol);
         }

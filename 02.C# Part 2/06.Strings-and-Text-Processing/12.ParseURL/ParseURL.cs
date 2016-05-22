@@ -4,7 +4,7 @@ class ParseURL
 {
     static void Main()
     {
-        string url = "http://telerikacademy.com/Courses/Courses/Details/212";
+        string url = Console.ReadLine();
 
         int serverIndex = url.IndexOf("://");
         int resIndex = url.Substring(serverIndex + 3).IndexOf("/") + serverIndex + 3;

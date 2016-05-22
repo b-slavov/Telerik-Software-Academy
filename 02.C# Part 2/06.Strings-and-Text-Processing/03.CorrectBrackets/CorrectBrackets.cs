@@ -5,11 +5,10 @@ class CorrectBrackets
 {
     static void Main()
     {
-        Console.Write("Enter expression: ");
-        string str = Console.ReadLine();
+        string input = Console.ReadLine();
         Stack<char> stack = new Stack<char>();
 
-        foreach (char ch in str)
+        foreach (char ch in input)
         {
             try
             {
@@ -24,14 +23,14 @@ class CorrectBrackets
             }
             catch (InvalidOperationException)
             {
-                Console.WriteLine("Incorrect!");
+                Console.WriteLine("Incorrect");
                 return;
             }
         }
 
         if (stack.Count == 0)
         {
-            Console.WriteLine("Correct!");
+            Console.WriteLine("Correct");
         }
         else
         {

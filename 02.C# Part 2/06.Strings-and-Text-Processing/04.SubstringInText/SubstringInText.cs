@@ -1,16 +1,21 @@
 ﻿using System;
-using System.Linq;
-using System.Text.RegularExpressions;
 
 class SubstringInText
 {
     static void Main()
     {
-        Console.Write("Enter text: ");
-        string str = Console.ReadLine();
-        Console.Write("Enter substring: ");
-        string subStr = Console.ReadLine();
+        string pattern = Console.ReadLine().ToLower();
+        string input = Console.ReadLine().ToLower();
 
-        Console.WriteLine("Substring {0} appears {1} times in the text. ", subStr, Regex.Matches(str, subStr).Cast<Match>().Count());
+        int counter = 0;
+        for (int i = 0; i <= input.Length - pattern.Length; i++)
+        {
+            if (input.Substring(i, pattern.Length) == pattern)
+            {
+                counter++;
+            }
+        }
+
+        Console.WriteLine(counter);
     }
 }
