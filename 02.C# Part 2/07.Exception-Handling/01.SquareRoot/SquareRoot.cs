@@ -6,7 +6,7 @@ class SquareRoot
     {
         if (value < 0)
         {
-            throw new ArgumentOutOfRangeException("Invalid number");
+            throw new ArgumentOutOfRangeException("Number must be positive!");
         }
 
         return Math.Sqrt(value);
@@ -25,17 +25,17 @@ class SquareRoot
 
             Console.WriteLine("{0:F3}", sqrt);
         }
-        catch (FormatException)
+        catch (FormatException e)
         {
-            Console.WriteLine("Invalid number");
+            Console.WriteLine(e.Message);
         }
-        catch (OverflowException)
+        catch (OverflowException e)
         {
-            Console.WriteLine("Invalid number");
+            Console.WriteLine(e.Message);
         }
-        catch (ArgumentOutOfRangeException)
+        catch (ArgumentOutOfRangeException e)
         {
-            Console.WriteLine("Invalid number");
+            Console.WriteLine(e.Message);
         }
         finally
         {
