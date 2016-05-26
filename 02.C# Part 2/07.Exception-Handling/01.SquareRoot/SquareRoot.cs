@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Globalization;
-using System.Threading;
 
 class SquareRoot
 {
@@ -8,7 +6,7 @@ class SquareRoot
     {
         if (value < 0)
         {
-            throw new ArgumentOutOfRangeException("Square root for negative numbers is undefined.");
+            throw new ArgumentOutOfRangeException("Invalid number");
         }
 
         return Math.Sqrt(value);
@@ -17,33 +15,31 @@ class SquareRoot
 
     static void Main()
     {
-        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-        Console.Write("Enter an integer to calculate its square root: ");
         string number = Console.ReadLine();
 
         try
         {
-            int n = Int32.Parse(number);
+            double n = double.Parse(number);
 
             double sqrt = Sqrt(n);
 
-            Console.WriteLine("The square root of {0} is {1:N4}.", n, sqrt);
+            Console.WriteLine("{0:F3}", sqrt);
         }
-        catch (FormatException fex)
+        catch (FormatException)
         {
-            Console.WriteLine(fex.Message);
+            Console.WriteLine("Invalid number");
         }
-        catch (OverflowException oex)
+        catch (OverflowException)
         {
-            Console.WriteLine(oex.Message);
+            Console.WriteLine("Invalid number");
         }
-        catch (ArgumentOutOfRangeException aex)
+        catch (ArgumentOutOfRangeException)
         {
-            Console.WriteLine(aex.Message);
+            Console.WriteLine("Invalid number");
         }
         finally
         {
-            Console.WriteLine("Goodbye.");
+            Console.WriteLine("Good bye");
         }
     }
 }

@@ -4,12 +4,11 @@ class EnterNumbers
 {
     static int ReadNumber(int start, int end)
     {
-        Console.Write("Enter number: ");
         int value = int.Parse(Console.ReadLine());
 
         if ((value < start) || (value > end))
         {
-            throw new Exception("Invalid range entered!");
+            throw new Exception("Invalid number!");
         }
 
         return value;
@@ -30,9 +29,9 @@ class EnterNumbers
                 values[i] = ReadNumber(min, max);
             }
         }
-        catch (Exception e)
+        catch (Exception)
         {
-            Console.WriteLine(e.Message);
+            Console.WriteLine("Exception");
         }
     }
 }
