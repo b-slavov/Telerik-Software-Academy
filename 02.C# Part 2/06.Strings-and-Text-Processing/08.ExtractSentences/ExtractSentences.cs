@@ -1,28 +1,21 @@
 ﻿using System;
+using System.Linq;
 
 class ExtractSentences
 {
     static void Main()
     {
-        string word = Console.ReadLine().ToLower();
-        string[] sentences = Console.ReadLine().Split('.');
+        string word = Console.ReadLine();
+        string text = Console.ReadLine();
 
-        int wordLength = word.Length;
+        char[] separators = text.Where(x => !char.IsLetter(x)).Distinct().ToArray();
+        string[] sentences = text.Split('.');
         foreach (var sentence in sentences)
         {
-            int sentenceLength = sentence.Length;
-            string sentenceToLower = sentence.ToLower();
-            for (int i = 0; i <= sentenceLength - wordLength; i++)
+            string[] words = sentence.Split(separators);
+            if (words.Contains(word))
             {
-                if (sentenceToLower.Substring(i, wordLength).Contains(word)
-                    && (sentenceLength == wordLength
-                        || (i == 0 && !char.IsLetter(sentenceToLower[i + wordLength]))
-                        || (i == sentenceLength - wordLength && !char.IsLetter(sentenceToLower[i - 1]))
-                        || (i > 0 && i < sentenceLength - wordLength && !char.IsLetter(sentenceToLower[i - 1]) && !char.IsLetter(sentenceToLower[i + wordLength]))))
-                {
-                    Console.Write(sentence + ".");
-                    break;
-                }
+                Console.Write(sentence.Trim() + ". ");
             }
         }
 
