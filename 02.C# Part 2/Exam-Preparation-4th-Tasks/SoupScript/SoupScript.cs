@@ -55,11 +55,6 @@ class SoupScript
                     codeWOEmptyEnties = codeWOEmptyEnties.Remove(j + 1, 1);
                 }
 
-                if (codeWOEmptyEnties[j] == '!' && codeWOEmptyEnties[j + 1] == ' ')
-                {
-                    codeWOEmptyEnties = codeWOEmptyEnties.Remove(j + 1, 1);
-                }
-
                 if (codeWOEmptyEnties[j] == '.' && codeWOEmptyEnties[j + 1] == ' ')
                 {
                     codeWOEmptyEnties = codeWOEmptyEnties.Remove(j + 1, 1);
