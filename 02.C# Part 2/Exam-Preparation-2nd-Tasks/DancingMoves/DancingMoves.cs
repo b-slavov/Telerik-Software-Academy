@@ -7,6 +7,7 @@ class DancingMoves
     {
         int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
         string line = Console.ReadLine();
+
         long sum = 0;
         int counter = 0;
         int index = 0;
