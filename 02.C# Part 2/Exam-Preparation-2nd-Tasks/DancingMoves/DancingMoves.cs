@@ -19,15 +19,7 @@ class DancingMoves
 
             for (int i = 0; i < moves; i++)
             {
-                if (direction == "right")
-                {
-                    index = (index + times) % arr.Length;
-                }
-                else
-                {
-                    index = (arr.Length + ((index - times) % arr.Length)) % arr.Length;
-                }
-
+                index = direction == "right" ? (index + times) % arr.Length : (arr.Length + ((index - times) % arr.Length)) % arr.Length;
                 sum += arr[index];
             }
 
