@@ -1,5 +1,7 @@
 ﻿namespace Singleton
 {
+    using System.Threading.Tasks;
+
     public static class Startup
     {
         public static void Main()

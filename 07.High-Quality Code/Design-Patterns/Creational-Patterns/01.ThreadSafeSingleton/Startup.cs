@@ -6,8 +6,13 @@
     {
         public static void Main()
         {
-            Parallel.For(0, 6, x => LazyThreadSafeLogger.Instance.SaveToLog(x));
-            LazyThreadSafeLogger.Instance.PrintLog();
+            Log(LazyThreadSafeLogger.Instance);
+        }
+
+        public static void Log(ILogger logger)
+        {
+            Parallel.For(0, 6, x => logger.SaveToLog(x));
+            logger.PrintLog();
         }
     }
 }

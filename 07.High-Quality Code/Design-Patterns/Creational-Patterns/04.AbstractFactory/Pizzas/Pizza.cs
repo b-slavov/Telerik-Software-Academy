@@ -27,6 +27,7 @@
             var stringBuilder = new StringBuilder();
             stringBuilder.AppendLine(this.Name);
             stringBuilder.AppendLine(string.Join(", ", this.Ingredients));
+
             return stringBuilder.ToString();
         }
     }

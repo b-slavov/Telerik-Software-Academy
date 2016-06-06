@@ -3,15 +3,20 @@
     using System;
     using System.Collections.Generic;
 
-    public sealed class LazyThreadSafeLogger
+    public sealed class LazyThreadSafeLogger : ILogger
     {
         private static readonly Lazy<LazyThreadSafeLogger> Lazy = new Lazy<LazyThreadSafeLogger>(() => new LazyThreadSafeLogger());
 
         private readonly List<LogEvent> events;
 
+        private static object locker = new object();
+
         private LazyThreadSafeLogger()
         {
-            this.events = new List<LogEvent>();
+            lock(locker)
+            {
+                this.events = new List<LogEvent>();
+            }
         }
 
         public static LazyThreadSafeLogger Instance
@@ -24,7 +29,10 @@
 
         public void SaveToLog(object message)
         {
-            this.events.Add(new LogEvent(message.ToString()));
+            lock (locker)
+            {
+                this.events.Add(new LogEvent(message.ToString()));
+            }
         }
 
         public void PrintLog()

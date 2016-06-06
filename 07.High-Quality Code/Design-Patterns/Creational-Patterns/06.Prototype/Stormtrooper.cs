@@ -25,6 +25,8 @@
             // Clone with MemberwiseClone - Fastest but only creates a shallow copy, i.e. for reference-type fields the original object and it's clone refer to the same object.
             // Clone with Reflection - Shallow copy by default, can be re-written to do deep copy. Advantage: automated. Disadvantage: reflection is slow.
             // Clone with Serialization - Easy, automated. Give up some control and serialization is slowest of all.
+            // Full deep copy:
+            // return new Stormtrooper(this.Type.Clone() as string, this.Height, this.Weight);
             return this.MemberwiseClone() as Stormtrooper;
         }
 

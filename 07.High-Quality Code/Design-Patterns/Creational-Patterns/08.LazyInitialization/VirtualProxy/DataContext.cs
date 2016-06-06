@@ -4,10 +4,7 @@
     {
         public User GetUserById(int id)
         {
-            return new UserProxy
-            {
-                Id = id,
-            };
+            return new UserProxy { Id = id };
         }
     }
 }

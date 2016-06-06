@@ -6,6 +6,7 @@
     public struct LazyObject
     {
         public LazyObjectType Name;
+
         public IList<int> Result;
     }
 }

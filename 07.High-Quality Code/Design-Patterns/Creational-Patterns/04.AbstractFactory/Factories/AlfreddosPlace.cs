@@ -19,6 +19,7 @@
                                       "extra smelly cheese"
                                   };
             var pizza = new CheesePizza(ingredients, Name);
+
             return pizza;
         }
 
@@ -26,6 +27,7 @@
         {
             var ingredients = new List<string> { "tomatoes", "ham", "bacon" };
             var pizza = new Calzone(ingredients, Name);
+
             return pizza;
         }
 
@@ -33,6 +35,7 @@
         {
             var ingredients = new List<string> { "tomatoes", "pepperoni", "salami" };
             var pizza = new PepperoniPizza(ingredients, Name);
+
             return pizza;
         }
     }

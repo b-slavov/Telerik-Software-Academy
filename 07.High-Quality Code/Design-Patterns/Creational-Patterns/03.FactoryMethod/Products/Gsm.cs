@@ -19,6 +19,7 @@
         public override string ToString()
         {
             var gsmAsString = new StringBuilder();
+
             gsmAsString.AppendFormat("Phone name: {0}", this.Name);
             gsmAsString.AppendLine();
             gsmAsString.AppendFormat("Height: {0}", this.Height);
@@ -29,6 +30,7 @@
             gsmAsString.AppendLine();
             gsmAsString.AppendFormat("Battery life: {0}", this.BatteryLife);
             gsmAsString.AppendLine();
+
             return gsmAsString.ToString();
         }
     }
