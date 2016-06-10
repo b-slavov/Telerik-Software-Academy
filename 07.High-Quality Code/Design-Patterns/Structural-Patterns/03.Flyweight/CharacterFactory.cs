@@ -35,7 +35,6 @@
                     case 'B':
                         character = new CharacterB();
                         break;
-
                     case 'Z':
                         character = new CharacterZ();
                         break;

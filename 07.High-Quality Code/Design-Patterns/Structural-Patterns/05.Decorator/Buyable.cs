@@ -17,5 +17,10 @@
             base.Display();
             Console.WriteLine("Price: $" + this.price);
         }
+
+        public void Buy()
+        {
+            this.LibraryItem.CopiesCount--;
+        }
     }
 }

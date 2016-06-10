@@ -23,7 +23,7 @@
         {
             // Try to deposit
             // Do some validations
-            // Do some more validations :)
+            // Do more validations
             this.Ballance -= amount;
 
             // Deposit successful

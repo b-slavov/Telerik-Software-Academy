@@ -2,9 +2,6 @@
 {
     using System;
 
-    /// <summary>
-    /// The Facade
-    /// </summary>
     public class HomeTheaterPro
     {
         private readonly Database db = new Database();
@@ -13,7 +10,7 @@
 
         private HomeTheaterPro()
         {
-            this.SeedDatabase(); // For testing
+            this.SeedDatabase();
         }
 
         public static HomeTheaterPro CreateInstance()
