@@ -6,16 +6,13 @@
     public class Matrix<T>
         where T : struct, IComparable<T>
     {
-        // fields
         private T[,] matrix;
 
-        // constructors
         public Matrix(int rows, int cols)
         {
             this.matrix = new T[rows, cols];
         }
 
-        // properties
         public int Rows
         {
             get { return this.matrix.GetLength(0); }
@@ -26,7 +23,6 @@
             get { return this.matrix.GetLength(1); }
         }
 
-        // methods
         public T this[int row, int col]
         {
             get
@@ -48,7 +44,6 @@
             }
 
             Matrix<T> result = new Matrix<T>(firstMatrix.Rows, firstMatrix.Columns);
-
             for (int row = 0; row < result.Rows; row++)
             {
                 for (int col = 0; col < result.Columns; col++)
@@ -68,7 +63,6 @@
             }
 
             Matrix<T> result = new Matrix<T>(firstMatrix.Rows, firstMatrix.Columns);
-
             for (int row = 0; row < result.Rows; row++)
             {
                 for (int col = 0; col < result.Columns; col++)
@@ -88,7 +82,6 @@
             }
 
             Matrix<T> result = new Matrix<T>(firstMatrix.Rows, secondMatrix.Columns);
-
             for (int secondCol = 0; secondCol < secondMatrix.Columns; secondCol++)
             {
                 dynamic cell = 0;
@@ -141,8 +134,7 @@
 
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder();
-
+            var result = new StringBuilder();
             for (int row = 0; row < this.matrix.GetLength(0); row++)
             {
                 for (int col = 0; col < this.matrix.GetLength(1); col++)

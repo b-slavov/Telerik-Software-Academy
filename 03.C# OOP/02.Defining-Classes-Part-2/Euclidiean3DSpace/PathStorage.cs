@@ -6,10 +6,9 @@
 
     public static class PathStorage
     {
-        // methods
         public static void SavePath(Path pathToWrite)
         {
-            StreamWriter pathWriter = new StreamWriter(@"..\..\ListOfPaths.txt", false);
+            var pathWriter = new StreamWriter(@"..\..\ListOfPaths.txt", false);
 
             using (pathWriter)
             {
@@ -22,19 +21,16 @@
 
         public static Path LoadPath()
         {
-            Path pathToLoad = new Path();
-            StreamReader pathReader = new StreamReader(@"..\..\ListOfPaths.txt");
+            var pathToLoad = new Path();
+            var pathReader = new StreamReader(@"..\..\ListOfPaths.txt");
 
             using (pathReader)
             {
                 string line = pathReader.ReadLine();
-
                 while (line != null)
                 {
                     int[] xyz = line.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(cor => int.Parse(cor)).ToArray();
-
                     pathToLoad.AddPoint(new Point3D(xyz[0], xyz[1], xyz[2]));
-
                     line = pathReader.ReadLine();
                 }
             }

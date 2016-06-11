@@ -2,7 +2,6 @@
 {
     public static class CalcDistance
     {
-        // method
         public static double GetDistance(Point3D firstPoint, Point3D secondPoint)
         {
             int xD = secondPoint.X - firstPoint.X;

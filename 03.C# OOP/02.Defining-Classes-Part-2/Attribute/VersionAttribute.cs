@@ -9,7 +9,7 @@
                     AttributeTargets.Method,
                     AllowMultiple = false)]
 
-    public class VersionAttribute : System.Attribute
+    public class VersionAttribute : Attribute
     {
         public VersionAttribute(string version)
         {

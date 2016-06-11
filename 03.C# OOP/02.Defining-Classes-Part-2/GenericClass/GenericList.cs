@@ -5,11 +5,9 @@
 
     public class GenericList<T>
     {
-        // fields
         private T[] elements;
         private int count;
 
-        // constructor
         public GenericList(int size)
         {
             if (size > 0)
@@ -23,13 +21,11 @@
             }
         }
 
-        // properties
         public int Count
         {
             get { return this.count; }
         }
 
-        // indexer declaration
         public T this[int index]
         {
             get
@@ -57,7 +53,6 @@
             }
         }
 
-        // methods
         public void Add(T element)
         {
             if (this.count == this.elements.Length)
@@ -76,13 +71,11 @@
                 throw new ArgumentException("Invalid index.");
             }
 
-            // starting from targeted index move back with one position all elements
             for (int i = index; i < this.elements.Length - 2; i++)
             {
                 this.elements[i] = this.elements[i + 1];
             }
 
-            // the last element should be released
             this.elements[this.elements.Length - 1] = default(T);
             this.count--;
         }
@@ -129,8 +122,7 @@
 
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder(this.count);
-
+            var result = new StringBuilder(this.count);
             for (int i = 0; i < this.count; i++)
             {
                 result.AppendLine(string.Format("[{0}] = {1}", i, this.elements[i]));
@@ -142,7 +134,6 @@
         private void AutoGrow()
         {
             T[] doubledArr = new T[this.elements.Length << 1];
-
             for (int i = 0; i < this.count; i++)
             {
                 doubledArr[i] = this.elements[i];
