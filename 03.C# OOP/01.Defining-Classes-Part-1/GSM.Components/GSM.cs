@@ -4,13 +4,11 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class GSMDevice
+    public class GSM
     {
-        // private constants
-        public static readonly GSMDevice IPhone4S = 
-            new GSMDevice("Apple", "iPhone 4S", 800, null, new Battery(BatteryType.Li_Pol, 200, 14), new Display(3.5f, 16000000));
+        public static readonly GSM IPhone4S =
+            new GSM("Apple", "iPhone 4S", 800, null, new Battery(BatteryType.Li_Pol, 200, 14), new Display(3.5f, 16000000));
 
-        // fields
         private string manufacturer;
 
         private string model;
@@ -23,14 +21,12 @@
 
         private List<Call> callHistory = new List<Call>();
 
-        // constructors
-        public GSMDevice(string manufacturer, string model)
+        public GSM(string manufacturer, string model)
             : this(manufacturer, model, null, null, new Battery(), new Display())
         {
-
         }
 
-        public GSMDevice(string manufacturer, string model, decimal? price, string owner, Battery gsmBattery, Display gsmDisplay)
+        public GSM(string manufacturer, string model, decimal? price, string owner, Battery gsmBattery, Display gsmDisplay)
         {
             this.Manufacturer = manufacturer;
             this.Model = model;
@@ -40,10 +36,8 @@
             this.display = gsmDisplay;
         }
 
-        // automatic properties
         public string Owner { get; set; }
 
-        // properties
         public string Manufacturer
         {
             get
@@ -120,7 +114,6 @@
             }
         }
 
-        // methods
         public string GetTotalPrice()
         {
             decimal totalPrice = 0m;

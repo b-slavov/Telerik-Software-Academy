@@ -5,15 +5,9 @@
 
     public class Display
     {
-        // fields
         private float? inches;
 
         private int? colors;
-
-        // constructors
-        public Display() : this(null, null)
-        {        
-        }
 
         public Display(float? inches, int? colors)
         {
@@ -21,7 +15,11 @@
             this.Colors = colors;
         }
 
-        // properties
+        public Display()
+            : this(null, null)
+        {
+        }
+
         public float? Inches
         {
             get 
@@ -58,10 +56,9 @@
             }
         }
 
-        // methods
         public override string ToString()
         {
-            StringBuilder displayInformation = new StringBuilder();
+            var displayInformation = new StringBuilder();
 
             if (this.inches != null)
             {
