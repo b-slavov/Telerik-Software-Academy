@@ -1,8 +1,5 @@
 ﻿namespace TemplateMethod
 {
-    /// <summary>
-    /// The 'AbstractClass'
-    /// </summary>
     public abstract class EmailSenderBase
     {
         protected EmailSenderBase(string senderEmail, string receiverEmail, string message)

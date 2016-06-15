@@ -28,20 +28,6 @@
             john.Send("Yoko", "My sweet love");
 
             yoko.SendToAll("Hi, all!");
-
-            /*
-             * Alternative:
-             * Meet Paul with George and vice-versa
-             * Meet Ringo with Paul and vice-versa
-             * Meet Ringo with George and vice-versa
-             * Meet John with Paul and vice-versa
-             * Meet John with George and vice-versa
-             * Meet John with Ringo and vice-versa
-             * Meet Yoko with Paul and vice-versa
-             * Meet Yoko with George and vice-versa
-             * Meet Yoko with Ringo and vice-versa
-             * Meet Yoko with John and vice-versa
-             */
         }
     }
 }

@@ -3,9 +3,6 @@
     using System;
     using System.Collections.Generic;
 
-    /// <summary>
-    /// The 'Invoker' class
-    /// </summary>
     internal class User
     {
         private readonly Calculator calculator = new Calculator();

@@ -2,9 +2,6 @@
 {
     using System;
 
-    /// <summary>
-    /// The 'AbstractColleague' class
-    /// </summary>
     public abstract class Participant
     {
         private readonly string name;

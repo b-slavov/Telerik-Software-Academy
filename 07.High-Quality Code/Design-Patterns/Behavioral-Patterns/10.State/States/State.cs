@@ -1,8 +1,5 @@
 ﻿namespace State.States
 {
-    /// <summary>
-    /// The 'State' abstract class
-    /// </summary>
     public abstract class State
     {
         protected State(Account account)

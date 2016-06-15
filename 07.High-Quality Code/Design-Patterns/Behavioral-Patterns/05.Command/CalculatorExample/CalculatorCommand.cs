@@ -2,9 +2,6 @@
 {
     using System;
 
-    /// <summary>
-    /// The 'ConcreteCommand' class
-    /// </summary>
     public class CalculatorCommand : Command
     {
         private readonly Calculator calculator;

@@ -5,11 +5,11 @@
         public static void Main()
         {
             Approver teamLead = new TeamLead();
-            Approver vp = new VicePresident();
-            Approver ceo = new President();
+            Approver vicePresident = new VicePresident();
+            Approver chiefExecutiveOfficer = new President();
 
-            teamLead.SetSuccessor(vp);
-            vp.SetSuccessor(ceo);
+            teamLead.SetSuccessor(vicePresident);
+            vicePresident.SetSuccessor(chiefExecutiveOfficer);
 
             var purchase = new Purchase(2034, 350.00);
             teamLead.ProcessRequest(purchase);

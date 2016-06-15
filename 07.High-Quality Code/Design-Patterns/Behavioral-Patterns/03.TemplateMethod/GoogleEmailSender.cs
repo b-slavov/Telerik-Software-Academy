@@ -27,6 +27,7 @@
             Console.WriteLine("Sending email...");
             Thread.Sleep(2000);
             Console.WriteLine("Done.");
+
             return true;
         }
     }

@@ -2,9 +2,6 @@
 {
     using System;
 
-    /// <summary>
-    /// A 'ConcreteColleague' class
-    /// </summary>
     public class Beetle : Participant
     {
         public Beetle(string name)

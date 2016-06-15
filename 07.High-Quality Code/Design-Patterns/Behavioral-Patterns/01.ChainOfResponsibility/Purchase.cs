@@ -1,8 +1,5 @@
 ﻿namespace ChainOfResponsibility
 {
-    /// <summary>
-    /// Class holding request details
-    /// </summary>
     internal class Purchase
     {
         public Purchase(int number, double amount)

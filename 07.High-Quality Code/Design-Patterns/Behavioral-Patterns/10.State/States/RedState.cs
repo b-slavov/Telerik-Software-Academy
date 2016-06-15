@@ -2,12 +2,6 @@
 {
     using System;
 
-    /// <summary>
-    /// A 'ConcreteState' class
-    /// <remarks>
-    /// Red indicates that account is overdrawn 
-    /// </remarks>
-    /// </summary>
     public class RedState : State
     {
         public RedState(Account account)

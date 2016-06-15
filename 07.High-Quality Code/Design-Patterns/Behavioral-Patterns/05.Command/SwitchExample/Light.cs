@@ -2,9 +2,6 @@
 {
     using System;
 
-    /// <summary>
-    /// The Receiver class
-    /// </summary>
     public class Light : ISwitchable
     {
         public void PowerOn()

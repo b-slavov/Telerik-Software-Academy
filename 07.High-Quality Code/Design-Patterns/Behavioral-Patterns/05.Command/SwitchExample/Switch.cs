@@ -2,9 +2,6 @@
 {
     using System.Collections.Generic;
 
-    /// <summary>
-    /// The Invoker class
-    /// </summary>
     public class Switch
     {
         private readonly List<ICommand> history = new List<ICommand>();

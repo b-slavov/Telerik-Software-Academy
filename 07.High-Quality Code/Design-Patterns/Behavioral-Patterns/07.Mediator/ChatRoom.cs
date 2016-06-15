@@ -2,13 +2,9 @@
 {
     using System.Collections.Generic;
 
-    /// <summary>
-    /// The 'ConcreteMediator' class
-    /// </summary>
     public class ChatRoom : AbstractChatRoom
     {
-        private readonly Dictionary<string, Participant> participants =
-            new Dictionary<string, Participant>();
+        private readonly Dictionary<string, Participant> participants = new Dictionary<string, Participant>();
 
         public override void Register(Participant participant)
         {

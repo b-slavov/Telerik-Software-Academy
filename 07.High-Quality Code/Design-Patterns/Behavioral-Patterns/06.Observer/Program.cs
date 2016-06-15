@@ -54,9 +54,7 @@
             ibm.Price = 120.75;
         }
 
-        private static void ObservableStockOnStockPriceChanged(
-            object sender,
-            StockPriceChangedEventArgs stockPriceChangedEventArgs)
+        private static void ObservableStockOnStockPriceChanged(object sender, StockPriceChangedEventArgs stockPriceChangedEventArgs)
         {
             Console.WriteLine(
                 "Named method notified of {0}'s " + "change to {1:C}",

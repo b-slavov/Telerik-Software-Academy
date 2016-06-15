@@ -2,14 +2,10 @@
 {
     using System.Collections;
 
-    /// <summary>
-    /// The 'ConcreteAggregate' class
-    /// </summary>
     public class ConcreteAggregate : Aggregate
     {
         private readonly ArrayList items = new ArrayList();
 
-        // Gets item count
         public int Count
         {
             get
@@ -18,7 +14,6 @@
             }
         }
 
-        // Indexer
         public object this[int index]
         {
             get

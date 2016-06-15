@@ -3,9 +3,6 @@
     using System;
     using System.Collections.Generic;
 
-    /// <summary>
-    /// The 'Subject' abstract class
-    /// </summary>
     public abstract class Stock
     {
         private readonly List<IInvestor> investors = new List<IInvestor>();

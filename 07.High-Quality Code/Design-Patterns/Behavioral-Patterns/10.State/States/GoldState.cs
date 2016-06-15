@@ -1,11 +1,5 @@
 ﻿namespace State.States
 {
-    /// <summary>
-    /// A 'ConcreteState' class
-    /// <remarks>
-    /// Gold indicates an interest bearing state
-    /// </remarks>
-    /// </summary>
     public class GoldState : State
     {
         public GoldState(Account account)

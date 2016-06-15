@@ -6,9 +6,6 @@
     using Visitor.EmployeesDemo.Employees;
     using Visitor.EmployeesDemo.Visitors;
 
-    /// <summary>
-    /// The 'ObjectStructure' class
-    /// </summary>
     internal class EmployeesList
     {
         private readonly List<Employee> employees = new List<Employee>();

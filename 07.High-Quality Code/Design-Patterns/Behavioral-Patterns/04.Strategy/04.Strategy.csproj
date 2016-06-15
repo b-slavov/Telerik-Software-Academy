@@ -45,6 +45,7 @@
     <Compile Include="DoSomethingImportant.cs" />
     <Compile Include="FileLogger.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="NoLogger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

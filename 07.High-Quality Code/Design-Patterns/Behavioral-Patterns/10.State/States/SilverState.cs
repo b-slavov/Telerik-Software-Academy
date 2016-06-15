@@ -1,11 +1,5 @@
 ﻿namespace State.States
 {
-    /// <summary>
-    /// A 'ConcreteState' class
-    /// <remarks>
-    /// Silver indicates a non-interest bearing state
-    /// </remarks>
-    /// </summary>
     public class SilverState : State
     {
         public SilverState(Account account)

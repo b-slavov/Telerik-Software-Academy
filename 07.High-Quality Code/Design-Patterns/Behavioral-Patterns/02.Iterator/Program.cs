@@ -24,7 +24,6 @@
             aggregate[2] = "Item C";
             aggregate[3] = "Item D";
 
-            // Create Iterator and provide aggregate
             IIterator iterator = new ConcreteIterator(aggregate);
 
             Console.WriteLine("Iterating over collection:");

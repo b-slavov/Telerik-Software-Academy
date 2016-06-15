@@ -2,9 +2,6 @@
 {
     using Visitor.EmployeesDemo.Visitors;
 
-    /// <summary>
-    /// The 'Element' class
-    /// </summary>
     public abstract class Employee
     {
         protected Employee()

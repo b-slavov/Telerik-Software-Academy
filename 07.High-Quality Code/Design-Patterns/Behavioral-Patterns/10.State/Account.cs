@@ -4,9 +4,6 @@
 
     using State.States;
 
-    /// <summary>
-    /// The 'Context' class
-    /// </summary>
     public class Account
     {
         public Account(string owner)

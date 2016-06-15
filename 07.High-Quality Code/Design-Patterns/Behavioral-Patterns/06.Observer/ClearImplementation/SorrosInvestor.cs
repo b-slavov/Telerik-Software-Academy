@@ -2,9 +2,6 @@
 {
     using System;
 
-    /// <summary>
-    /// The 'ConcreteObserver' class
-    /// </summary>
     public class SorrosInvestor : IInvestor
     {
         public void Update(Stock stock)
