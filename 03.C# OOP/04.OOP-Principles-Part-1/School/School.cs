@@ -6,16 +6,13 @@
 
     public class School
     {
-        // fields
         private List<SchoolClass> schoolClasses = new List<SchoolClass>();
 
-        // constructor
         public School(List<SchoolClass> newClasses)
         {
             this.SchoolClasses = newClasses;
         }
 
-        // property
         public List<SchoolClass> SchoolClasses
         {
             get
@@ -29,7 +26,6 @@
             }
         }
 
-        // method
         public override string ToString()
         {
             var result = new StringBuilder();

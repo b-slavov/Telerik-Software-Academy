@@ -2,7 +2,8 @@
 {
     public abstract class Cat : Animal
     {
-        public Cat(string name, uint age, Gender sex) : base(name, age, sex)
+        public Cat(string name, uint age, Gender sex)
+            : base(name, age, sex)
         { 
         }
     }

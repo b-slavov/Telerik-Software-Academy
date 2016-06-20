@@ -2,15 +2,12 @@
 {
     public class Student : Person
     {
-        // fields
-        private static uint autoId = 1; // for unique student class number
+        private static uint autoId = 1;
 
-        // constructor
         public Student(string firstName, string lastName, string comment = null)
             : base(firstName, lastName, comment)
         {
             this.ClassNumber = autoId;
-
             autoId++;
         }
 

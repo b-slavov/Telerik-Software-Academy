@@ -6,14 +6,12 @@
 
     public class SchoolClass : ICommentable
     {
-        // fields
         private static char autoId = 'A';
 
         private List<Teacher> teachers = new List<Teacher>();
 
         private List<Student> students = new List<Student>();
 
-        // constructor
         public SchoolClass(List<Teacher> teachers, List<Student> students, string comment = null)
         {
             this.ClassId = autoId;
@@ -24,12 +22,10 @@
             autoId++;
         }
 
-        // automatic properties
         public char ClassId { get; private set; }
 
         public string Comment { get; set; }
 
-        // properties
         public List<Teacher> Teachers
         {
             get
@@ -56,10 +52,9 @@
             }
         }
 
-        // methods
         public string GetDisciplines()
         {
-            HashSet<string> classDisciplines = new HashSet<string>();
+            var classDisciplines = new HashSet<string>();
 
             foreach (var teacher in this.teachers)
             {

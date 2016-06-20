@@ -5,22 +5,19 @@
 
     public abstract class Animal : ISound
     {
-        // fields
         private uint age;
 
         private string name;
 
-        private Gender sex;
+        private Gender gender;
 
-        // constructor
-        public Animal(string name, uint age, Gender sex)
+        public Animal(string name, uint age, Gender gender)
         {
             this.Name = name;
             this.Age = age;
-            this.Sex = sex;
+            this.Gender = gender;
         }
 
-        // properties
         public uint Age
         {
             get
@@ -47,20 +44,19 @@
             }
         }
 
-        public Gender Sex
+        public Gender Gender
         {
             get
             {
-                return this.sex;
+                return this.gender;
             }
 
             private set
             {
-                this.sex = value;
+                this.gender = value;
             }
         }
 
-        // methods
         public static void PrintAverageAge(Animal[] animals)
         {
             float catsCount = 0f;
@@ -91,7 +87,7 @@
                 }
             }
 
-            StringBuilder result = new StringBuilder();
+            var result = new StringBuilder();
             result.AppendLine(string.Format("Average age of cats: {0:F2}", catsAge / catsCount));
             result.AppendLine(string.Format("Average age of dogs: {0:F2}", dogsAge / dogsCount));
             result.AppendLine(string.Format("Average age of frogs: {0:F2}", frogsAge / frogsCount));

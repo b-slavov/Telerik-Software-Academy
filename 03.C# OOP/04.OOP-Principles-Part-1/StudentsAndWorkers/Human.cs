@@ -2,19 +2,16 @@
 {
     public abstract class Human
     {
-        // fields
         private string firstName;
 
         private string lastName;
 
-        // constructor
         public Human(string firstName, string lastName)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
         }
 
-        // properties
         public string FirstName
         {
             get

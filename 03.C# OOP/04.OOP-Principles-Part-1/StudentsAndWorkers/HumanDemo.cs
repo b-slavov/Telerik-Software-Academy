@@ -46,7 +46,6 @@
 
             // merge lists
             var bothStudentsAndWorkers = students.Concat<Human>(workers).ToList();
-
             bothStudentsAndWorkers = bothStudentsAndWorkers
                 .OrderBy(human => human.FirstName)
                 .ThenBy(human => human.LastName).ToList();

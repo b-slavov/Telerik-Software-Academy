@@ -4,10 +4,8 @@
 
     public class Worker : Human
     {
-        // fields
         private const uint WorkDays = 5;
 
-        // constructor
         public Worker(string firstName, string lastName, decimal weekSalary, uint workHoursPerDay) 
             : base(firstName, lastName)
         {
@@ -15,12 +13,10 @@
             this.WorkHoursPerDay = workHoursPerDay;
         }
 
-        // automatic properties
         public decimal WeekSalary { get; set; }
 
         public uint WorkHoursPerDay { get; set; }
 
-        // methods
         public decimal MoneyPerHour()
         {
             decimal result = (this.WeekSalary / WorkDays) / this.WorkHoursPerDay;
