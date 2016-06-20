@@ -4,12 +4,13 @@
     using System.Globalization;
     using System.Threading;
 
-    public static class ExtensionsDemo
+    public static class Startup
     {
         public static void Main()
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             int[] arrayOfNumbers = { 7, -3, 1, 9, 5 };
+
             Console.WriteLine(string.Join(", ", arrayOfNumbers));
             Console.WriteLine("Sum = {0}", arrayOfNumbers.Sum());
             Console.WriteLine("Product = {0}", arrayOfNumbers.Product());

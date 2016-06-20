@@ -78,9 +78,9 @@
 
         public static void Print(IEnumerable<Student> students)
         {
-            foreach (var st in students)
+            foreach (var student in students)
             {
-                Console.WriteLine(st);
+                Console.WriteLine(student);
                 Console.WriteLine();
             }
 

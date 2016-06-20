@@ -5,19 +5,16 @@
 
     public class Timer : EventArgs
     {
-        // fields
         private static int delay;
 
-        // constructor 
         public Timer(int seconds)
         {
             Delay = seconds;
         }
 
-        // declare the event using EventHandler<T>
+        // Declare the event using EventHandler<T>
         public event EventHandler RaiseCustomEvent;
 
-        // property
         public static int Delay
         {
             get
@@ -36,10 +33,9 @@
             }
         }
 
-        // method that start testing
         public void Start(uint seconds)
         {
-            DateTime end = DateTime.Now.AddMilliseconds(seconds * 1000);
+            var end = DateTime.Now.AddMilliseconds(seconds * 1000);
 
             while (DateTime.Now.Second <= end.Second)
             {
@@ -49,7 +45,7 @@
             }
         }
 
-        // method that raises the event
+        // Method that raises the event
         protected void OnRaiseCustomEvent()
         {
             EventHandler handler = this.RaiseCustomEvent;

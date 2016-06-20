@@ -11,11 +11,8 @@
         public static void Main()
         {
             string[] arrayOfStrings = { "Eminem", "DMX", "2Pac", "Spens", "Rick Ross" };
-
             maxLength = arrayOfStrings[0].Length;
-
             var result = GetLongest(arrayOfStrings);
-
             Console.WriteLine("The longest string in {0} is {1}", string.Join(", ", arrayOfStrings), result.OrderByDescending(x => x.Length).First());
         }
 
