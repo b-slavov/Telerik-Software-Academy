@@ -5,12 +5,6 @@
 
     public abstract class Animal : ISound
     {
-        private uint age;
-
-        private string name;
-
-        private Gender gender;
-
         public Animal(string name, uint age, Gender gender)
         {
             this.Name = name;
@@ -18,44 +12,13 @@
             this.Gender = gender;
         }
 
-        public uint Age
-        {
-            get
-            {
-                return this.age;
-            }
+        public uint Age { get; set; }
 
-            private set
-            {
-                this.age = value;
-            }
-        }
+        public string Name { get; set; }
 
-        public string Name
-        {
-            get
-            {
-                return this.name;
-            }
+        public Gender Gender { get; set; }
 
-            private set
-            {
-                this.name = value;
-            }
-        }
-
-        public Gender Gender
-        {
-            get
-            {
-                return this.gender;
-            }
-
-            private set
-            {
-                this.gender = value;
-            }
-        }
+        public Species Species { get; set; }
 
         public static void PrintAverageAge(Animal[] animals)
         {
@@ -70,20 +33,20 @@
 
             foreach (var animal in animals)
             {
-                if (animal is Cat)
+                if (animal.Species == Species.Cat)
                 {
                     catsCount++;
-                    catsAge += animal.age;
+                    catsAge += animal.Age;
                 }
-                else if (animal is Dog)
+                else if (animal.Species == Species.Dog)
                 {
                     dogsCount++;
-                    dogsAge += animal.age;
+                    dogsAge += animal.Age;
                 }
-                else if (animal is Frog)
+                else if (animal.Species == Species.Frog)
                 {
                     frogsCount++;
-                    frogsAge += animal.age;
+                    frogsAge += animal.Age;
                 }
             }
 
@@ -99,7 +62,7 @@
 
         public override string ToString()
         {
-            return string.Format("I am {0}", this.name);
+            return string.Format("I am {0}", this.Name);
         }
     }
 }

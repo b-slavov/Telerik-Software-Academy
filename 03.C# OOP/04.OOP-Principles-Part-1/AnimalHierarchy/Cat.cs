@@ -4,7 +4,8 @@
     {
         public Cat(string name, uint age, Gender sex)
             : base(name, age, sex)
-        { 
+        {
+            this.Species = Species.Cat;
         }
     }
 }
