@@ -7,7 +7,6 @@
         public static void Main()
         {
             Console.Write("Enter a number: ");
-
             try
             {
                 var number = int.Parse(Console.ReadLine());

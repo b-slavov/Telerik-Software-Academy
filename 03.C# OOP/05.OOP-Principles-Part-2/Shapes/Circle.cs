@@ -4,7 +4,8 @@
 
     public class Circle : Shape
     {
-        public Circle(double diameter) : base(diameter, diameter)
+        public Circle(double diameter)
+            : base(diameter, diameter)
         {
         }
 
