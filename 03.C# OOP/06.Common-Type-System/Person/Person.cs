@@ -16,7 +16,7 @@
 
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder();
+            var result = new StringBuilder();
 
             result.AppendFormat("{0}, {1} years old", this.Name, this.Age == null ? "Unknown" : this.Age.ToString());
 

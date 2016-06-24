@@ -2,19 +2,19 @@
 {
     public enum Specialties
     {
-        // SU
-        Law, InternationalOrganizationsAndMultilateralDiplomacy, InternationalSecurity, JournalismAndMedia, ElectronicMedia, SportsJournalism, Informatics, MathematicsAndInformatics, AppliedMathematics, 
+        // Sofia University
+        Law, InternationalOrganizationsAndMultilateralDiplomacy, InternationalSecurity, JournalismAndMedia, ElectronicMedia, SportsJournalism, Informatics, MathematicsAndInformatics, AppliedMathematics,
 
-        // TU
+        // Technical University
         ElectricalPowerEngineering, Electrical, ElectricityFromRenewableEnergySources, MachineEngineering, Mechatronics, EngineeringDesign, GraphicAndWebDesign, InformationTechnology, ComputerAndSoftwareEngineering,
 
-        // UNWE
+        // University of National and World Economy
         IndustrialBusiness, Entrepreneurship, Property, MarketingAndStrategicPlanning, PublicAdministration, Management, HumanResourcesAndSocialProtection, EconomicSociology, PoliticalEconomy,
 
-        // UACEG
+        // University of Architecture Civil Engineering and Geodesy
         ConstructionOfBuildingsAndFacilities, StructuralEngineering, ProjectManagementInConstruction, Architecture, Urbanism, ModernArchitecturalTechnology, WaterSupplyAndSewerage, HydrotechnicalConstruction, IrrigationConstruction,
 
-        // MU
+        // Medical University
         Surgery, Dialysis, AnatomyAndHistology, ProstheticDentistry, Orthodontics, ConservativeDentistry, OrganicChemistry, DrugsTechnologyWithBiopharmacy, Pharmacognosy
     }
 }

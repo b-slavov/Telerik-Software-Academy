@@ -2,19 +2,19 @@
 {
     public enum Faculties
     {
-        // SU
+        // Sofia University
         FacultyOfLaw, FacultyОfJournalismАndMassCommunication, FacultyOfMathematicsAndInformatics,
 
-        // TU
+        // Technical University
         FacultyOfElectricalEngineering, FacultyOfMechanicalEngineering, FacultyOfComputingAndManagement,
 
-        // UNWE
+        // University of National and World Economy
         BusinessFaculty, FacultyManagementAndAdministration, GeneralEconomics,
 
-        // UACEG
+        // University of Architecture Civil Engineering and Geodesy
         ConstructionFaculty, FacultyOfArchitecture, HydrotechnicalFaculty,
 
-        // MU
+        // Medical University
         МedicalFaculty, FacultyОfDentalMedicine, FacultyОfPharmacy
     }
 }

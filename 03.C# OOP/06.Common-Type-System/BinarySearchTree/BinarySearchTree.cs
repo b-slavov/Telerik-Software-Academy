@@ -4,7 +4,8 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class BST<T> : IEnumerable<T>, ICloneable where T : IComparable<T>
+    public class BST<T> : IEnumerable<T>, ICloneable
+        where T : IComparable<T>
     {
         private TreeNode root;
 
@@ -70,7 +71,7 @@
 
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder();
+            var result = new StringBuilder();
 
             this.InOrderTreeWalk(this.root, x => result.AppendFormat("{0} ", x));
 
@@ -237,15 +238,12 @@
             }
         }
 
-        // class
         public class TreeNode
         {
-            // fields
             public TreeNode LeftChild;
 
             public TreeNode RightChild;
 
-            // constructor
             public TreeNode(T value)
             {
                 this.Value = value;
@@ -253,7 +251,6 @@
                 this.RightChild = null;
             }
 
-            // automatic property
             public T Value { get; set; }
         }
     }
