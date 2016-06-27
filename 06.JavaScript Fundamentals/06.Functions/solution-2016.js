@@ -81,14 +81,11 @@ function solve(args) {
 // Problem 7. Sorting array
 
 function solve(args) {
-    var input = args[0].split('\n'),
-		sequenceLength = input[0],
-		sequence = input[1].split(' ').map(Number),
-		i;
+    var input = args[1].split(' ').map(Number);
 	
-    sequence.sort(function(a, b) {
+    input.sort(function(a, b) {
 		return a-b
 		});
 
-	return sequence.join(' ');
+	return input.join(' ');
 }
