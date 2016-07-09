@@ -5,16 +5,17 @@
     using System.Linq;
     using System.Text;
 
-    using Cosmetics.Contracts;
     using Cosmetics.Common;
+    using Cosmetics.Contracts;
 
     public class Category : ICategory
     {
         private const int MinCategoryNameLength = 2;
         private const int MaxCategoryNameLength = 15;
+        private const string CategoryName = "Category name";
 
         private string name;
-        private readonly IList<IProduct> products;
+        private ICollection<IProduct> products;
 
         public Category(string name)
         {
@@ -28,23 +29,26 @@
             {
                 return this.name;
             }
-            private set
+
+            set
             {
-                Validator.CheckIfStringIsNullOrEmpty(value, string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty, "Category name"));
-                Validator.CheckIfStringLengthIsValid(value, MaxCategoryNameLength, MinCategoryNameLength, string.Format(GlobalErrorMessages.InvalidStringLength, "Category name", MinCategoryNameLength, MaxCategoryNameLength));
+                Validator.CheckIfStringIsNullOrEmpty(value, string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty, CategoryName));
+                Validator.CheckIfStringLengthIsValid(
+                    value,
+                    MaxCategoryNameLength,
+                    MinCategoryNameLength,
+                    string.Format(GlobalErrorMessages.InvalidStringLength, CategoryName, MinCategoryNameLength, MaxCategoryNameLength));
                 this.name = value;
             }
         }
 
         public void AddCosmetics(IProduct cosmetics)
         {
-            Validator.CheckIfNull(cosmetics, string.Format(GlobalErrorMessages.ObjectCannotBeNull, "Cosmetics to add to category"));
             this.products.Add(cosmetics);
         }
 
         public void RemoveCosmetics(IProduct cosmetics)
         {
-            Validator.CheckIfNull(cosmetics, string.Format(GlobalErrorMessages.ObjectCannotBeNull, "Cosmetics to remove from category"));
             if (!this.products.Contains(cosmetics))
             {
                 throw new InvalidOperationException(string.Format("Product {0} does not exist in category {1}!", cosmetics.Name, this.Name));
@@ -55,16 +59,14 @@
 
         public string Print()
         {
-            var categoryString = string.Format("{0} category - {1} {2} in total", this.Name, this.products.Count, this.products.Count != 1 ? "products" : "product");
-
             var result = new StringBuilder();
-            result.AppendLine(categoryString);
 
-            var sortedProducts =
-                this.products
-                    .OrderBy(pr => pr.Brand)
-                    .ThenByDescending(pr => pr.Price);
+            string categoryName = this.Name;
+            int numberOfProducts = products.Count;
+            string singularOrPlural = this.products.Count == 1 ? "product" : "products";
 
+            result.AppendLine(string.Format("{0} category - {1} {2} in total", categoryName, numberOfProducts, singularOrPlural));
+            var sortedProducts = this.products.OrderBy(p => p.Brand).ThenByDescending(p => p.Price);
             foreach (var product in sortedProducts)
             {
                 result.AppendLine(product.Print());

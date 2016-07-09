@@ -7,9 +7,10 @@
 
     public abstract class Product : IProduct
     {
+        private const int MinProductNameLength = 3;
+        private const int MaxProductNameLength = 10;
         private const int MinBrandLength = 2;
-        private const int MinStringLength = 3;
-        private const int MaxStringLength = 10;
+        private const int MaxBrandLength = 10;
         private const string ProductName = "Product name";
         private const string ProductBrand = "Product brand";
 
@@ -26,14 +27,19 @@
 
         public string Name
         {
-            get 
+            get
             {
                 return this.name;
             }
-            private set
+
+            set
             {
                 Validator.CheckIfStringIsNullOrEmpty(value, string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty, ProductName));
-                Validator.CheckIfStringLengthIsValid(value, MaxStringLength, MinStringLength, string.Format(GlobalErrorMessages.InvalidStringLength, ProductName, MinStringLength, MaxStringLength));
+                Validator.CheckIfStringLengthIsValid(
+                    value,
+                    MaxProductNameLength,
+                    MinProductNameLength,
+                    string.Format(GlobalErrorMessages.InvalidStringLength, "Product name", MinProductNameLength, MaxProductNameLength));
                 this.name = value;
             }
         }
@@ -44,10 +50,15 @@
             {
                 return this.brand;
             }
-            private set
+
+            set
             {
                 Validator.CheckIfStringIsNullOrEmpty(value, string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty, ProductBrand));
-                Validator.CheckIfStringLengthIsValid(value, MaxStringLength, MinBrandLength, string.Format(GlobalErrorMessages.InvalidStringLength, ProductBrand, MinBrandLength, MaxStringLength));
+                Validator.CheckIfStringLengthIsValid(
+                    value,
+                    MaxBrandLength,
+                    MinBrandLength,
+                    string.Format(GlobalErrorMessages.InvalidStringLength, "Product brand", MinBrandLength, MaxBrandLength));
                 this.brand = value;
             }
         }
@@ -55,13 +66,15 @@
         public decimal Price { get; protected set; }
 
         public GenderType Gender { get; private set; }
-        
+
         public virtual string Print()
         {
             var result = new StringBuilder();
+
             result.AppendLine(string.Format("- {0} - {1}:", this.Brand, this.Name));
             result.AppendLine(string.Format("  * Price: ${0}", this.Price));
             result.Append(string.Format("  * For gender: {0}", this.Gender));
+
             return result.ToString();
         }
     }

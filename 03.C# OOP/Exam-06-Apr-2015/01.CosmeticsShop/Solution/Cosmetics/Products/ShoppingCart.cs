@@ -4,11 +4,10 @@
     using System.Linq;
 
     using Cosmetics.Contracts;
-    using Cosmetics.Common;
 
     public class ShoppingCart : IShoppingCart
     {
-        private readonly IList<IProduct> products;
+        private readonly ICollection<IProduct> products;
 
         public ShoppingCart()
         {
@@ -17,13 +16,11 @@
 
         public void AddProduct(IProduct product)
         {
-            Validator.CheckIfNull(product, string.Format(GlobalErrorMessages.ObjectCannotBeNull, "Product to add to cart"));
             this.products.Add(product);
         }
 
         public void RemoveProduct(IProduct product)
         {
-            Validator.CheckIfNull(product, string.Format(GlobalErrorMessages.ObjectCannotBeNull, "Product to remove from cart"));
             this.products.Remove(product);
         }
 
@@ -34,7 +31,7 @@
 
         public decimal TotalPrice()
         {
-            return this.products.Sum(pr => pr.Price);
+            return this.products.Sum(p => p.Price);
         }
     }
 }
