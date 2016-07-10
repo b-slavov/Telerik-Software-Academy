@@ -15,7 +15,8 @@
 
             if (defenderWithSpecialty.TotalHitPoints > 0)
             {
-                defenderWithSpecialty.TotalHitPoints = defenderWithSpecialty.Count * defenderWithSpecialty.Creature.HealthPoints;
+                defenderWithSpecialty.TotalHitPoints = defenderWithSpecialty.Count
+                                                       * defenderWithSpecialty.Creature.HealthPoints;
             }
         }
     }

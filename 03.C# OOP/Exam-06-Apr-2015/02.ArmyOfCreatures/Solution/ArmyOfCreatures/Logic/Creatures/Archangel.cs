@@ -4,7 +4,8 @@
 
     public class Archangel : Creature
     {
-        public Archangel() : base(30, 30, 250, 50)
+        public Archangel()
+            : base(30, 30, 250, 50)
         {
             this.AddSpecialty(new Hate(typeof(Devil)));
             this.AddSpecialty(new Hate(typeof(ArchDevil)));

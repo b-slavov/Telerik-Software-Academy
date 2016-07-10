@@ -34,6 +34,7 @@
 
             if (this.rounds <= 0)
             {
+                // Effect expires after fixed number of rounds
                 return;
             }
 
