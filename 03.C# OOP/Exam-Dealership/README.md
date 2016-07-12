@@ -4,7 +4,7 @@
 ## Object-Oriented Programming – Practical example - 11 July 2016
 ## Problem 1 – Dealership
 
-![dealer](./imgs/used_cardealer_photo.jpg)
+![dealer](https://github.com/b-slavov/Telerik-Software-Academy/blob/master/03.C%23%20OOP/Exam-Dealership/cardealer.jpg)
 
 There are many car dealers in a city to the south of Sofia. It is not safe to say the name of the town so just continue reading and don't ask questions. The dealers are always trying to sell vehicles with many problems and represent them as "Ka4va6 se i kara6" or "Karala q e edna baba ot teh do curkvata". When they try to sell something to you they always use this phrase "Poneje vijdam 4e si pi4 6te ti q dam eftino". :)
 
