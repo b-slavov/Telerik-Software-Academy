@@ -22,6 +22,11 @@
             private set
             {
                 Validator.ValidateNull(value, ExtendetConstants.ContentCannotBeNull);
+                ExtendetValidator.ValidateStringLength(
+                    value,
+                    Constants.MinCommentLength,
+                    Constants.MaxCommentLength,
+                    string.Format(Constants.StringMustBeBetweenMinAndMax, "Content", Constants.MinCommentLength, Constants.MaxCommentLength));
                 this.content = value;
             }
         }
