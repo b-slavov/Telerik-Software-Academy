@@ -1,19 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Santase.Logic.Cards;
-using System.Collections.Generic;
-using Santase.Logic.Players;
-using Santase.Logic;
-using Santase.Logic.RoundStates;
-
-namespace Santase.Tests
+﻿namespace Santase.Tests
 {
+    using System.Collections.Generic;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    using Santase.Logic;
+    using Santase.Logic.Cards;
+    using Santase.Logic.Players;
+    using Santase.Logic.RoundStates;
+
     [TestClass]
     public class PlayerActionValidatorTests
     {
         private PlayerActionValidater validator = new PlayerActionValidater();
 
         [TestMethod]
-        public void PlayingCardThatsNotInHand_ShouldBeInvalid()
+        public void PlayingCardThatIsNotInHandShouldBeInvalid()
         {
             var cards = new List<Card>() { new Card(CardSuit.Club, CardType.Ace) };
             var action = new PlayerAction(PlayerActionType.PlayCard, new Card(CardSuit.Club, CardType.Jack), Announce.None);
@@ -24,7 +26,7 @@ namespace Santase.Tests
         }
 
         [TestMethod]
-        public void PlayingCardFromHand_ShouldBeValid()
+        public void PlayingCardFromHandShouldBeValid()
         {
             var cards = new List<Card>() { new Card(CardSuit.Club, CardType.Ace) };
             var action = new PlayerAction(PlayerActionType.PlayCard, new Card(CardSuit.Club, CardType.Ace), Announce.None);
@@ -35,7 +37,7 @@ namespace Santase.Tests
         }
 
         [TestMethod]
-        public void PlayerChangesTrumpWithNine_ShouldBeValid()
+        public void PlayerChangesTrumpWithNineShouldBeValid()
         {
             var cards = new List<Card>() { new Card(CardSuit.Club, CardType.Nine) };
             var action = new PlayerAction(PlayerActionType.ChangeTrump, new Card(CardSuit.Club, CardType.Nine), Announce.None);
@@ -47,7 +49,7 @@ namespace Santase.Tests
         }
 
         [TestMethod]
-        public void PlayerChangesTrumpWithQueen_ShouldBeInvalid()
+        public void PlayerChangesTrumpWithQueenShouldBeInvalid()
         {
             var cards = new List<Card>() { new Card(CardSuit.Club, CardType.Queen) };
             var action = new PlayerAction(PlayerActionType.ChangeTrump, new Card(CardSuit.Club, CardType.Queen), Announce.None);
@@ -59,7 +61,7 @@ namespace Santase.Tests
         }
 
         [TestMethod]
-        public void FourtyAnnounce_ShouldBeValid()
+        public void FourtyAnnounceShouldBeValid()
         {
             var cards = new List<Card>() { new Card(CardSuit.Club, CardType.Queen), new Card(CardSuit.Club, CardType.King) };
             var announce = Announce.Fourty;
@@ -73,7 +75,7 @@ namespace Santase.Tests
         }
 
         [TestMethod]
-        public void FourtyAnnounceWithoutQueenOrKing_ShouldBeInvalid()
+        public void FourtyAnnounceWithoutQueenOrKingShouldBeInvalid()
         {
             var cards = new List<Card>() { new Card(CardSuit.Club, CardType.Queen), new Card(CardSuit.Club, CardType.King), new Card(CardSuit.Heart, CardType.Jack) };
             var announce = Announce.Fourty;
@@ -87,7 +89,7 @@ namespace Santase.Tests
         }
 
         [TestMethod]
-        public void FourtyAnnounceWhenPlayerIsNotFirst_ShouldChangeAnnounceToNone()
+        public void FourtyAnnounceWhenPlayerIsNotFirstShouldChangeAnnounceToNone()
         {
             var cards = new List<Card>() { new Card(CardSuit.Club, CardType.Queen), new Card(CardSuit.Club, CardType.King), new Card(CardSuit.Heart, CardType.Jack) };
             var announce = Announce.Fourty;

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Santase.Logic.Extensions;
-
-namespace Santase.Logic.Cards
+﻿namespace Santase.Logic.Cards
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Santase.Logic.Extensions;
+
     public class Deck : IDeck
     {
         private IList<Card> listOfCards;
@@ -78,7 +76,6 @@ namespace Santase.Logic.Cards
                 CardSuit.Spade,
             };
         }
-
 
         public int CardsLeft
         {

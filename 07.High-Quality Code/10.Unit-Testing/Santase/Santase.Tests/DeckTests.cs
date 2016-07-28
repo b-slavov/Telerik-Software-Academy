@@ -1,21 +1,19 @@
-﻿using NUnit.Framework;
-using Santase.Logic.Cards;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Santase.Tests
+﻿namespace Santase.Tests
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using NUnit.Framework;
+
+    using Santase.Logic.Cards;
+
     [TestFixture]
     class DeckTests
     {
         private const int DeckSize = 24;
 
         [Test]
-        [ExpectedException]
-        public void DrawNextCardOnEmptyDeck_ShouldThrowException()
+        public void DrawNextCardOnEmptyDeckShouldThrowException()
         {
             var deck = new Deck();
 
