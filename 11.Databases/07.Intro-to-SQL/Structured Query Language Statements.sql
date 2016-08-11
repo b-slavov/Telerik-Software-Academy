@@ -1,10 +1,13 @@
 SELECT
 
-	SELECT * FROM Departments
+	SELECT *
+	FROM Departments
 
-	SELECT DepartmentID, Name FROM Departments
+	SELECT DepartmentID, Name
+	FROM Departments
 
-	SELECT LastName, Salary, Salary + 300 FROM Employees
+	SELECT LastName, Salary, Salary + 300
+	FROM Employees
 
 	SELECT FirstName, LastName, Salary, Salary * 0.2 AS Bonus
 	FROM Employees
@@ -32,13 +35,16 @@ SELECT
 	FROM Employees
 	WHERE DepartmentID = 1
 
-	SELECT FirstName, LastName, DepartmentID FROM
-	Employees WHERE LastName = 'Sullivan'
+	SELECT FirstName, LastName, DepartmentID
+	FROM Employees
+	WHERE LastName = 'Sullivan'
 
-	SELECT LastName, Salary FROM Employees
+	SELECT LastName, Salary
+	FROM Employees
 	WHERE Salary <= 20000
 
-	SELECT LastName, Salary FROM Employees
+	SELECT LastName, Salary
+	FROM Employees
 	WHERE Salary BETWEEN 20000 AND 22000
 
 	SELECT FirstName, LastName, ManagerID
@@ -116,7 +122,7 @@ SELECT
 	FULL OUTER JOIN employee m
 	ON e.ManagerID = m.EmployeeID
 
-	SELECT e.FirstName, e.LastName, t.Name as Towns, a.AddressText
+	SELECT e.FirstName, e.LastName, t.Name AS Towns, a.AddressText
 	FROM Employees e
 	JOIN Addresses a
 	ON e.AddressID = a.AddressID
@@ -124,7 +130,7 @@ SELECT
 	ON a.TownID = t.TownID
 
 	// Self-join
-	SELECT e.FirstName + ' ' + e.LastName + ' is managed by ' + m.LastName as Message
+	SELECT e.FirstName + ' ' + e.LastName + ' is managed by ' + m.LastName AS Message
 	FROM Employees e
 	JOIN Employees m
 	ON (e.ManagerId = m.EmployeeId)
@@ -139,7 +145,7 @@ SELECT
 	ON e.DepartmentID = d.DepartmentID
 	WHERE d.Name = 'Sales'
 
-	SELECT e.FirstName, e.LastName, d.Name as DeptName
+	SELECT e.FirstName, e.LastName, d.Name AS DeptName
 	FROM Employees e
 	INNER JOIN Departments d
 	ON (e.DepartmentId = d.DepartmentId
