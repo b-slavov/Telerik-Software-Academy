@@ -23,10 +23,12 @@ SELECT
 	SELECT DepartmentID
 	FROM Employees
 
+	-- Eliminating duplicate rows
 	SELECT
 	DISTINCT DepartmentID
 	FROM Employees
 
+	-- UNION takes all from the two columns. INTERSECT - common things. EXCEPT - different ones
 	SELECT FirstName AS Name
 	FROM Employees
 	UNION
@@ -49,10 +51,12 @@ SELECT
 	FROM Employees
 	WHERE Salary BETWEEN 20000 AND 22000
 
+	-- IN filters by concret values. NOT IN filters by every other vales except the passing ones
 	SELECT FirstName, LastName, ManagerID
 	FROM Employees
 	WHERE ManagerID IN (109, 3, 16)
 
+	-- LIKE is for searching in text by some pattern. % means zero or more chars. _ means one char
 	SELECT FirstName
 	FROM Employees
 	WHERE FirstName LIKE 'S%'
@@ -84,9 +88,10 @@ SELECT
 		AND
 		(Salary >= 20000 OR ManagerID IS NULL)
 
+	-- When more than one thing is enumerated in ORDER BY, it means THEN BY
 	SELECT LastName, HireDate
 	FROM Employees
-	ORDER BY HireDate
+	ORDER BY HireDate, LastName
 
 	SELECT LastName, HireDate
 	FROM Employees
@@ -95,13 +100,15 @@ SELECT
 	SELECT LastName, Name AS DepartmentName
 	FROM Employees, Departments
 
+	-- INNER can be skipped, because the default JOIN is INNER
 	SELECT e.EmployeeID, e.LastName, e.DepartmentID, d.DepartmentID, d.Name AS DepartmentName
-	FROM Employees e 
-	INNER JOIN Departments d 
+	FROM Employees e
+	INNER JOIN Departments d
     ON e.DepartmentID = d.DepartmentID
 
+	-- INNER JOIN with WHERE clause
 	SELECT e.EmployeeID, e.LastName, e.DepartmentID, d.DepartmentID, d.Name AS DepartmentName
-	FROM Employees e, Departments d 
+	FROM Employees e, Departments d
 	WHERE e.DepartmentID = d.DepartmentID
 
 	SELECT e.LastName EmpLastName, m.EmployeeID MgrID, m.LastName MgrLastName
@@ -109,6 +116,7 @@ SELECT
 	INNER JOIN Employees m
 	ON e.ManagerID = m.EmployeeID
 
+	-- Returns all rows, which matched condition, plus those from the LEFT table, which didn't match
 	SELECT e.LastName EmpLastName, m.EmployeeID MgrID, m.LastName MgrLastName
 	FROM Employees e
 	LEFT OUTER JOIN Employees m
@@ -120,10 +128,11 @@ SELECT
 	ON e.ManagerID = m.EmployeeID
 
 	SELECT e.LastName EmpLastName, m.EmployeeID MgrID, m.LastName MgrLastName
-	FROM employee e
-	FULL OUTER JOIN employee m
+	FROM Employee e
+	FULL OUTER JOIN Employee m
 	ON e.ManagerID = m.EmployeeID
 
+	-- The second JOIN will execute over the result from the first one
 	SELECT e.FirstName, e.LastName, t.Name AS Towns, a.AddressText
 	FROM Employees e
 	JOIN Addresses a
@@ -131,23 +140,25 @@ SELECT
 	JOIN Towns t
 	ON a.TownID = t.TownID
 
-	// Self-join
+	-- Self-join
 	SELECT e.FirstName + ' ' + e.LastName + ' is managed by ' + m.LastName AS Message
 	FROM Employees e
 	JOIN Employees m
-	ON (e.ManagerId = m.EmployeeId)
+	ON e.ManagerId = m.EmployeeId
 
-	SELECT LastName [Last Name], Name [Dept Name]
+	-- The result is Decart multiplication
+	SELECT LastName [Last Name], Name [Department Name]
 	FROM Employees
 	CROSS JOIN Departments
 
+	-- The commented code below can be used instead of the WHERE clause
 	SELECT e.EmployeeID, e.LastName, e.DepartmentID, d.DepartmentID, d.Name AS DepartmentName
 	FROM Employees e 
 	INNER JOIN Departments d 
-	ON e.DepartmentID = d.DepartmentID
+	ON e.DepartmentID = d.DepartmentID -- AND d.Name = 'Sales'
 	WHERE d.Name = 'Sales'
 
-	SELECT e.FirstName, e.LastName, d.Name AS DeptName
+	SELECT e.FirstName, e.LastName, d.Name AS DepartmentName
 	FROM Employees e
 	INNER JOIN Departments d
 	ON (e.DepartmentId = d.DepartmentId
@@ -156,16 +167,19 @@ SELECT
 
 INSERT
 
-	INSERT INTO EmployeesProjects VALUES (229, 25)
+	-- INSERT values into the columns. They have to match the column type
+	INSERT INTO EmployeesProjects VALUES ('Sofia', 'Mladost', 1)
 
+	-- INSERT values into selected columns from "Projects" table
 	INSERT INTO Projects(Name, StartDate)
 	VALUES ('New project', GETDATE())
 
+	-- INSERT the data from the SELECT clause into these columns form the "Projects" table
 	INSERT INTO Projects(Name, StartDate)
 	SELECT Name + ' Restructuring', GETDATE()
 	FROM Departments
 
-	// Bulk INSERT
+	-- Bulk INSERT
 	INSERT INTO EmployeesProjects VALUES
 	(229, 1),
 	(229, 2),
@@ -176,6 +190,7 @@ INSERT
 
 UPDATE
 
+	-- UPDATE [table] SET [column] WHERE condition. WHERE IS MANDATORY!!!
 	UPDATE Employees
 	SET LastName = 'Brown'
 	WHERE EmployeeID = 1
@@ -205,5 +220,5 @@ DELETE
 		ON e.DepartmentID = d.DepartmentID
 	WHERE d.Name = 'Sales'
 
-	// Delete all rows from a table at once
+	-- Delete all rows from a table at once
 	TRUNCATE TABLE Users
