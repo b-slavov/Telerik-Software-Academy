@@ -168,7 +168,8 @@ SELECT
 INSERT
 
 	-- INSERT values into the columns. They have to match the column type
-	INSERT INTO EmployeesProjects VALUES ('Sofia', 'Mladost', 1)
+	INSERT INTO EmployeesProjects
+	VALUES ('Sofia', 'Mladost', 1)
 
 	-- INSERT values into selected columns from "Projects" table
 	INSERT INTO Projects(Name, StartDate)
