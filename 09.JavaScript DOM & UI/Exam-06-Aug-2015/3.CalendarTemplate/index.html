@@ -8,13 +8,32 @@
 <body>
     <div id="calendar"></div>
     <script id="calendar-template" type='text/x-handlebars-template'>	
-        <!-- template here -->
+        {{#with data}}
+			<div class="events-calendar">
+                <h2 class="header">Appointments for <span class="month">{{month}}</span> <span class="year">{{year}}</span></h2>
+                {{#days}}
+                <div class="col-date">
+                    <div class="date">{{day}}</div>
+                    <div class="events">
+                        {{#events}}
+                            {{#if title}}
+                            <div class="event {{importance}}" title="{{comment}}">
+                                <div class="title">{{title}}</div>
+                                <span class="time">at: {{time}}</span>
+                            </div>
+                            {{else}}
+                            <div class="event {{importance}}">
+                                <div class="title">Free slot</div>
+                            </div>
+                            {{/if}}
+                        {{/events}}
+                    </div>
+                </div>
+                {{/days}}
+            </div>'
+		{{/with}}
     </script>
     <script src="handlebars.js"></script>
-    <script src="task-3.js"></script>
-    <script>
-        solve()('calendar-template');
-    </script>
     <script src="main.js"></script>
 </body>
 </html>
