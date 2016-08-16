@@ -20,20 +20,20 @@
     * The first item from the items collection should be displayed bigger on the left
       * With its title on top
     * _Example_:
-      <img src="result/1. initial.png" width="450" />      
+      ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-1-result/1.%20initial.png)      
       
   * Images in the list (on the right) have some properties:
     * The title and the image must have a parent with class `image-container`
     * When `hovered`
       * They should change their **background color**      
       * _Example:_      
-        <img src="result/2. cow-hovered.png" width="450" />
+        ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-1-result/2.%20cow-hovered.png)
     * When `unhovered`
       * They should return to their **default background color**
     * When `clicked`
       * The **bigger image and its title** (on the left) are **replaced with the clicked image on the left**
       * _Example:_      
-        <img src="result/3. hamster-clicked.png" width="450" />
+        ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-1-result/3.%20hamster-clicked.png)
   * The big image and title on the left must have a parent with class `image-preview`
       
   * The filter should provide functionality for **filtering the images** on the list of images (on the right)
@@ -43,7 +43,7 @@
     * When the text in the box is empty
       * All images should be visible
     * _Example:_      
-      <img src="result/4. text-in-filter.png" width="450" />
+      ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-1-result/4.%20text-in-filter.png)
       
   * Constraints:
     * You are allowed only to edit the contents of the file "scripts.js"
