@@ -27,15 +27,15 @@
 * _Examples:_
   * Initial:
     * Three columns:
-      * <img src="result/1.1. initial-three-columns.png" width="450" />
+      * ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-2-result/1.1.%20initial-three-columns.png)
     * Five columns:    
-      * <img src="result/1.2. initial-five-columns.png" width="450" />
+      * ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-2-result/1.2.%20initial-five-columns.png)
     * Four columns:
-      * <img src="result/1.3. initial-four-columns.png" width="450" />    
+      * ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-2-result/1.3.%20initial-four-columns.png)
   * Clicked image:  
-    * <img src="result/2. clicked-picture.png" width="450" />
+    * ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-2-result/2.%20clicked-picture.png)
   * Next Image:
-    * <img src="result/3. next-picture.png" width="450" />
+    * ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-2-result/3.%20next-picture.png)
   * Previous Image:
-    * <img src="result/4. previous-picture.png" width="450" />
+    * ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-2-result/4.%20previous-picture.png)
   

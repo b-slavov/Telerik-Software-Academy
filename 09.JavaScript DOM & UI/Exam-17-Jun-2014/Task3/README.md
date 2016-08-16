@@ -5,7 +5,7 @@
   * Note that in the result some html elements have `right` class and others don’t
   
 * _Example:_
-  <img src="result/result.PNG" />
+  ![] (https://github.com/b-slavov/Telerik-Software-Academy/blob/master/09.JavaScript%20DOM%20%26%20UI/Exam-17-Jun-2014/Descriptions/task-3-result/result.PNG)
   
 * Constraints:
   * You are allowed only to edit the contents of the file "index.html " and only the template inside the element with ID "authors-template"
