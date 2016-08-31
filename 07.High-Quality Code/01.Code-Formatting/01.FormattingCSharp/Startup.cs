@@ -38,7 +38,7 @@
         private static void ListEvents(string command)
         {
             int pipeIndex = command.IndexOf('|');
-            DateTime date = GetDate(command, "ListEvents");
+            var date = GetDate(command, "ListEvents");
             string countString = command.Substring(pipeIndex + 1);
             int count = int.Parse(countString);
             events.ListEvents(date, count);
@@ -78,7 +78,8 @@
 
         private static DateTime GetDate(string command, string commandType)
         {
-            DateTime date = DateTime.Parse(command.Substring(commandType.Length + 1, 20));
+            var date = DateTime.Parse(command.Substring(commandType.Length + 1, 20));
+
             return date;
         }
     }

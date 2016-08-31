@@ -7,13 +7,13 @@
     {
         internal static void Start()
         {
-            const int MOVES_TO_WIN = 35;
+            const int MovesToWin = 35;
             string command = string.Empty;
             char[,] playfield = GeneratePlayfield();
             char[,] minefield = GenerateMinefield();
             int counter = 0;
             bool gameOver = false;
-            List<Player> players = new List<Player>(6);
+            var players = new List<Player>(6);
             int row = 0;
             int col = 0;
             bool showInstructions = true;
@@ -34,7 +34,7 @@
                 if (command.Length >= 3)
                 {
                     if (int.TryParse(command[0].ToString(), out row) &&
-                    int.TryParse(command[2].ToString(), out col) &&
+                        int.TryParse(command[2].ToString(), out col) &&
                         row <= playfield.GetLength(0) && col <= playfield.GetLength(1))
                     {
                         command = "turn";
@@ -54,7 +54,7 @@
                         showInstructions = false;
                         break;
                     case "exit":
-                        Console.WriteLine("4a0, 4a0, 4a0!");
+                        Console.WriteLine("Exit game!");
                         break;
                     case "turn":
                         if (minefield[row, col] != '*')
@@ -65,7 +65,7 @@
                                 counter++;
                             }
 
-                            if (MOVES_TO_WIN == counter)
+                            if (MovesToWin == counter)
                             {
                                 gameWon = true;
                             }
@@ -89,12 +89,9 @@
                 {
                     RevealMinefield(minefield);
                     RenderField(minefield);
-                    Console.Write(
-                        "\nGame Over. Score: {0} points. " +
-                        "Enter nick: ",
-                        counter);
+                    Console.Write("\nGame Over. Score: {0} points.\nEnter nick: ", counter);
                     string nickname = Console.ReadLine();
-                    Player player = new Player(nickname, counter);
+                    var player = new Player(nickname, counter);
                     if (players.Count < 5)
                     {
                         players.Add(player);
@@ -112,8 +109,8 @@
                         }
                     }
 
-                    players.Sort((Player r1, Player r2) => r2.Name.CompareTo(r1.Name));
-                    players.Sort((Player r1, Player r2) => r2.Points.CompareTo(r1.Points));
+                    players.Sort((Player playerOne, Player playerTwo) => playerTwo.Name.CompareTo(playerOne.Name));
+                    players.Sort((Player playerOne, Player playerTwo) => playerTwo.Points.CompareTo(playerOne.Points));
                     RenderRanklist(players);
 
                     playfield = GeneratePlayfield();
@@ -127,9 +124,9 @@
                 {
                     Console.WriteLine("\nCongratulations! You discovered all the 35 safe cells.");
                     RenderField(minefield);
-                    Console.WriteLine("Enter your nick: ");
-                    string imeee = Console.ReadLine();
-                    Player player = new Player(imeee, counter);
+                    Console.WriteLine("Enter your name: ");
+                    string name = Console.ReadLine();
+                    var player = new Player(name, counter);
                     players.Add(player);
                     RenderRanklist(players);
                     playfield = GeneratePlayfield();
@@ -151,11 +148,7 @@
             {
                 for (int i = 0; i < players.Count; i++)
                 {
-                    Console.WriteLine(
-                        "{0}. {1} --> {2} boxes",
-                        i + 1,
-                        players[i].Name,
-                        players[i].Points);
+                    Console.WriteLine("{0}. {1} --> {2} boxes", i + 1, players[i].Name, players[i].Points);
                 }
 
                 Console.WriteLine();
@@ -166,11 +159,7 @@
             }
         }
 
-        internal static void MakeMove(
-            char[,] playfield,
-            char[,] minefield,
-            int row,
-            int col)
+        internal static void MakeMove(char[,] playfield, char[,] minefield, int row, int col)
         {
             char adjacentMinesCount = CountAdjacentMines(minefield, row, col);
             minefield[row, col] = adjacentMinesCount;
@@ -228,10 +217,10 @@
                 }
             }
 
-            List<int> randomNumbersCollection = new List<int>();
+            var randomNumbersCollection = new List<int>();
             while (randomNumbersCollection.Count < 15)
             {
-                Random random = new Random();
+                var random = new Random();
                 int number = random.Next(50);
                 if (!randomNumbersCollection.Contains(number))
                 {

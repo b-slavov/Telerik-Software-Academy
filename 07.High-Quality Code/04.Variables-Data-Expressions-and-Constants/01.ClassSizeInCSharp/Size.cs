@@ -4,26 +4,15 @@
 
     public class Size
     {
-        private double width;
-        private double height;
-
         public Size(double width, double height)
         {
-            this.width = width;
-            this.height = height;
+            this.Width = width;
+            this.Height = height;
         }
 
-        public double Width
-        {
-            get { return this.width; }
-            private set { this.width = value; }
-        }
+        public double Width { get; private set; }
 
-        public double Height
-        {
-            get { return this.height; } 
-            private set { this.height = value; }
-        }
+        public double Height { get; private set; }
 
         public static Size GetRotatedSize(Size objectToRotate, double rotationAngle)
         {
@@ -32,8 +21,9 @@
             double rotationCosAbs = Math.Abs(rotationAngleCos);
             double rotationSinAbs = Math.Abs(rotationAngleSin);
 
-            double width = (rotationCosAbs * objectToRotate.width) + (rotationSinAbs * objectToRotate.height);
-            double height = (rotationSinAbs * objectToRotate.width) + (rotationCosAbs * objectToRotate.height);
+            double width = (rotationCosAbs * objectToRotate.Width) + (rotationSinAbs * objectToRotate.Height);
+            double height = (rotationSinAbs * objectToRotate.Width) + (rotationCosAbs * objectToRotate.Height);
+
             return new Size(width, height);
         }
     }

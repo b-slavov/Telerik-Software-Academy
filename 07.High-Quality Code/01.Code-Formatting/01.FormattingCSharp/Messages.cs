@@ -5,16 +5,11 @@
 
     public static class Messages
     {
-        private static StringBuilder output = new StringBuilder();
-
-        public static StringBuilder Output
-        {
-            get { return output; }
-        }
+        public static StringBuilder Output { get; set; }
 
         public static void EventAdded()
         {
-            output.Append("Event added\n");
+            Output.AppendLine("Event added");
         }
 
         public static void EventDeleted(int x)
@@ -25,20 +20,20 @@
             }
             else
             {
-                output.AppendFormat("{0} events deleted\n", x);
+                Output.AppendLine(string.Format("{0} events deleted", x));
             }
         }
 
         public static void NoEventsFound()
         {
-            output.Append("No events found\n");
+            Output.AppendLine("No events found");
         }
 
         public static void PrintEvent(Event eventToPrint)
         {
             if (eventToPrint != null)
             {
-                output.Append(eventToPrint + "\n");
+                Output.AppendLine(eventToPrint.ToString());
             }
         }
 

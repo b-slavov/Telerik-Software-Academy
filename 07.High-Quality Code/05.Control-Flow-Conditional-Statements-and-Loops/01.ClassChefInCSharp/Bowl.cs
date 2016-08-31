@@ -6,7 +6,7 @@
     {
         public void Add(Vegetable vegetable)
         {
-            Console.WriteLine("{0} is added to the bowl.", vegetable);
+            Console.WriteLine($"{vegetable} is added to the bowl.");
         }
     }
 }

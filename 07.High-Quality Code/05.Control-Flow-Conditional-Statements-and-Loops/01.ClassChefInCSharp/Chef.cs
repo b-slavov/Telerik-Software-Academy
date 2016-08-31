@@ -23,27 +23,27 @@
 
         private Bowl GetBowl()
         {
-        return new Bowl();
+            return new Bowl();
         }
 
         private Potato GetPotato()
         {
-        return new Potato();
+            return new Potato();
         }
 
         private Carrot GetCarrot()
         {
-        return new Carrot();
+            return new Carrot();
         }
 
         private void Cut(Vegetable vegetable)
         {
-            Console.WriteLine("{0} is cut.", vegetable);
+            Console.WriteLine($"{vegetable} is cut.");
         }
 
         private void Peel(Vegetable vegetable)
         {
-            Console.WriteLine("{0} is peeled.", vegetable);
+            Console.WriteLine($"{vegetable} is peeled.");
         }
     }
 }

@@ -10,7 +10,7 @@
 
         public void AddEvent(DateTime date, string title, string location)
         {
-            Event newEvent = new Event(date, title, location);
+            var newEvent = new Event(date, title, location);
             this.title.Add(title.ToLower(), newEvent);
             this.date.Add(newEvent);
             Messages.EventAdded();

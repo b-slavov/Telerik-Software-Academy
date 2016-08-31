@@ -31,6 +31,7 @@
             }
 
             double average = collectionSum / collection.Length;
+
             return new double[] { minValue, maxValue, average };
         }
 

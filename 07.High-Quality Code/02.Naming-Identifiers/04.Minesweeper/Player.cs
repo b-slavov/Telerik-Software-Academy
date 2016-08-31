@@ -2,21 +2,18 @@
 {
     public class Player
     {
-        private string name;
-        private int points;
-
         public Player()
         {
         }
 
         public Player(string name, int points)
         {
-            this.name = name;
-            this.points = points;
+            this.Name = name;
+            this.Points = points;
         }
 
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
-        public int Points { get; set; }
+        public int Points { get; private set; }
     }
 }
