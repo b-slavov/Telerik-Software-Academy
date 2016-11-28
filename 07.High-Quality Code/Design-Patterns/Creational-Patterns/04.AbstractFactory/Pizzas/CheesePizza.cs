@@ -16,7 +16,7 @@
         {
             get
             {
-                return string.Format("Cheese pizza, made by {0}", this.madeBy);
+                return $"Cheese pizza, made by {this.madeBy}";
             }
         }
     }

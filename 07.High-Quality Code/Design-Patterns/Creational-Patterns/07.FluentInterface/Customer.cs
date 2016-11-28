@@ -39,7 +39,10 @@
 
         public void PrintToConsole()
         {
-            Console.WriteLine("first name: {0} \nlast name: {1} \ngender: {2} \naddress: {3}", this.context.FirstName, this.context.LastName, this.context.Gender, this.context.Address);
+            Console.WriteLine($"First name: {this.context.FirstName}");
+            Console.WriteLine($"Last name: {this.context.LastName}");
+            Console.WriteLine($"Gender: {this.context.Gender}");
+            Console.WriteLine($"Address: {this.context.Address}");
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿namespace Builder.Builders
 {
-    // The 'ConcreteBuilder' class
     public class ScooterBuilder : VehicleBuilder
     {
         public ScooterBuilder()

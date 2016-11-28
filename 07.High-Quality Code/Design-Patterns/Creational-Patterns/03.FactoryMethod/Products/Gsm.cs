@@ -20,16 +20,11 @@
         {
             var gsmAsString = new StringBuilder();
 
-            gsmAsString.AppendFormat("Phone name: {0}", this.Name);
-            gsmAsString.AppendLine();
-            gsmAsString.AppendFormat("Height: {0}", this.Height);
-            gsmAsString.AppendLine();
-            gsmAsString.AppendFormat("Width: {0}", this.Width);
-            gsmAsString.AppendLine();
-            gsmAsString.AppendFormat("Weight: {0}", this.Weight);
-            gsmAsString.AppendLine();
-            gsmAsString.AppendFormat("Battery life: {0}", this.BatteryLife);
-            gsmAsString.AppendLine();
+            gsmAsString.AppendLine($"Phone name: {this.Name}");
+            gsmAsString.AppendLine($"Height: {this.Height}");
+            gsmAsString.AppendLine($"Width: {this.Width}");
+            gsmAsString.AppendLine($"Weight: {this.Weight}");
+            gsmAsString.AppendLine($"Battery life: {this.BatteryLife}");
 
             return gsmAsString.ToString();
         }

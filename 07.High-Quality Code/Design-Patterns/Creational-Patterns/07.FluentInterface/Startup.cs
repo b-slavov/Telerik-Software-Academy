@@ -16,10 +16,10 @@
 
             var customer = new Customer();
             customer
-                .FirstName("Nikolay")
-                .LastName("Kostov")
+                .FirstName("O'Shea")
+                .LastName("Jackson")
                 .Gender("Male")
-                .Address("Sofia")
+                .Address("Los Angeles")
                 .PrintToConsole();
         }
     }

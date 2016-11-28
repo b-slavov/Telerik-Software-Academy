@@ -32,7 +32,7 @@
 
         public override string ToString()
         {
-            return string.Format("Type: {0}, Height: {1}, Weight: {2}", this.Type, this.Height, this.Weight);
+            return $"Type: {this.Type}, Height: {this.Height}, Weight: {this.Weight}";
         }
     }
 }

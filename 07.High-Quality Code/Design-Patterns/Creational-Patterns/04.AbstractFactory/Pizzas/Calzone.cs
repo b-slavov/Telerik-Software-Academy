@@ -16,7 +16,7 @@
         {
             get
             {
-                return string.Format("Calzone made by {0}", this.madeBy);
+                return $"Calzone made by {this.madeBy}";
             }
         }
     }

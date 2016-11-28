@@ -11,25 +11,22 @@
         public override CheesePizza MakeCheesePizza()
         {
             var ingredients = new List<string> { "rotten tomatoes", "grey cheese", "green cheese" };
-            var pizza = new CheesePizza(ingredients, Name);
 
-            return pizza;
+            return new CheesePizza(ingredients, Name);
         }
 
         public override Calzone MakeCalzone()
         {
             var ingredients = new List<string> { "rotten tomatoes", "greasy ham" };
-            var pizza = new Calzone(ingredients, Name);
 
-            return pizza;
+            return new Calzone(ingredients, Name);
         }
 
         public override PepperoniPizza MakePepperoniPizza()
         {
             var ingredients = new List<string> { "old salami", "green tomatoes" };
-            var pizza = new PepperoniPizza(ingredients, Name);
 
-            return pizza;
+            return new PepperoniPizza(ingredients, Name);
         }
     }
 }

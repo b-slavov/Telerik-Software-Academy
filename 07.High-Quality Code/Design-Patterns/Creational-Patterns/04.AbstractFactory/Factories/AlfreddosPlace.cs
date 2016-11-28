@@ -18,25 +18,22 @@
                                       "blue cheese",
                                       "extra smelly cheese"
                                   };
-            var pizza = new CheesePizza(ingredients, Name);
 
-            return pizza;
+            return new CheesePizza(ingredients, Name);
         }
 
         public override Calzone MakeCalzone()
         {
             var ingredients = new List<string> { "tomatoes", "ham", "bacon" };
-            var pizza = new Calzone(ingredients, Name);
 
-            return pizza;
+            return new Calzone(ingredients, Name);
         }
 
         public override PepperoniPizza MakePepperoniPizza()
         {
             var ingredients = new List<string> { "tomatoes", "pepperoni", "salami" };
-            var pizza = new PepperoniPizza(ingredients, Name);
 
-            return pizza;
+            return new PepperoniPizza(ingredients, Name);
         }
     }
 }
