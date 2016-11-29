@@ -8,11 +8,11 @@
         {
             if (purchase.Amount < 100000.0)
             {
-                Console.WriteLine("{0} approved request #{1}", this.GetType().Name, purchase.Number);
+                Console.WriteLine($"{this.GetType().Name} approved request #{purchase.Number}");
             }
             else
             {
-                Console.WriteLine("Request #{0} requires an executive meeting!", purchase.Number);
+                Console.WriteLine($"Request #{purchase.Number} requires an executive meeting!");
             }
         }
     }

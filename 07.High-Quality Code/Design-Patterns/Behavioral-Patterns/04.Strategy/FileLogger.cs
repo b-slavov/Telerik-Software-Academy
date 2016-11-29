@@ -15,7 +15,7 @@
 
         public void Log(string message)
         {
-            File.AppendAllLines(this.filePath, new List<string> { string.Format("[{0}] {1}", DateTime.Now, message) });
+            File.AppendAllLines(this.filePath, new List<string> { $"[{DateTime.Now}] {message}" });
         }
     }
 }

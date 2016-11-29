@@ -24,7 +24,7 @@
                     break;
             }
 
-            Console.WriteLine("Current value = {0,3} (following {1} {2})", this.currentValue, @operator, operand);
+            Console.WriteLine($"Current value = {this.currentValue,3} (following {@operator} {operand})");
         }
     }
 }

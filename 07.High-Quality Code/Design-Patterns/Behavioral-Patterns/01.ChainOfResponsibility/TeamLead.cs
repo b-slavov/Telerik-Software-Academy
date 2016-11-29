@@ -8,7 +8,7 @@
         {
             if (purchase.Amount < 10000.0)
             {
-                Console.WriteLine("{0} approved request #{1}", this.GetType().Name, purchase.Number);
+                Console.WriteLine($"{this.GetType().Name} approved request #{purchase.Number}");
             }
             else if (this.Successor != null)
             {

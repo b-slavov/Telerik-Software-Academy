@@ -6,7 +6,7 @@
     {
         public void Log(string message)
         {
-            Console.WriteLine("[{0}] {1}", DateTime.Now.ToLongTimeString(), message);
+            Console.WriteLine($"[{DateTime.Now.ToLongTimeString()}] {message}");
         }
     }
 }
